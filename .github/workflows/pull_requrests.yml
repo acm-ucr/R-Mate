@@ -1,9 +1,8 @@
 name: pull_requests
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
+  pull_request:
+    branches: [main, dev]
 jobs:
   format:
     name: formatting
