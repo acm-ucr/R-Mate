@@ -1,7 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "👾Let's check your styling, testing and building your project before committing"
+echo "👾 Let's check your styling, testing and building your project before committing"
 
 # Check Prettier standards
 npm run format ||
@@ -18,4 +18,4 @@ npm run eslint ||
 )
 
 
-echo '✅good job! You passed all the checks!🥳'
+echo '✅ good job! You passed all the checks!🥳'

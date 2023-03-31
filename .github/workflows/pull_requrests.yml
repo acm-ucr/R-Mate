@@ -2,13 +2,29 @@ name: pull_requests
 
 on:
   pull_request:
-    branches: [ "dev" ]
+    branches: ['dev']
 
 jobs:
-  build:
-
+  format:
+    name: formatting
     runs-on: ubuntu-latest
 
+    steps:
+      - run: npm ci
+      - run: npm run check
+
+  lint:
+    name: linting
+    runs-on: ubuntu-latest
 
     steps:
-    - run: npm ci
+      - run: npm ci
+      - run: npm run eslint
+
+  build:
+    name: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: npm ci
+      - run: npm run start
