@@ -12,20 +12,21 @@
     "build": "expo prebuild"
   },
   "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
     "@expo/webpack-config": "^18.0.1",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/native": "^6.1.6",
     "@react-navigation/native-stack": "^6.9.12",
     "eslint-config-prettier": "^8.8.0",
     "expo": "~48.0.9",
+    "expo-splash-screen": "~0.18.1",
     "expo-status-bar": "~1.4.4",
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.71.4",
     "react-native-web": "~0.18.10",
-    "tailwindcss": "^3.3.1",
-    "expo-splash-screen": "~0.18.1"
+    "tailwindcss": "^3.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
