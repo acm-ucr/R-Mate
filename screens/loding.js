@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const events = () => {
+const loding = () => {
   return (
     <View>
-      <Text>events</Text>
+      <Text>loding</Text>
     </View>
   );
 };
 
-export default events;
+export default loding;

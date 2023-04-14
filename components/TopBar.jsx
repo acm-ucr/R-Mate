@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const events = () => {
+const TopBar = () => {
   return (
     <View>
-      <Text>events</Text>
+      <Text>TopBar</Text>
     </View>
   );
 };
 
-export default events;
+export default TopBar;
