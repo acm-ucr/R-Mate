@@ -8,11 +8,8 @@ const profile = () => {
   return (
     <View>
       <Text>profile</Text>
-      <TouchableOpacity
-        className="flex flex-col mr-3"
-        onPress={() => navigation.navigate('LoginScreen')}
-      >
-        <View className="bg-red-400">
+      <TouchableOpacity className="" onPress={() => navigation.navigate('LoginScreen')}>
+        <View className="bg-red-400 w-1/2">
           <Text className="">Click to Logout</Text>
         </View>
       </TouchableOpacity>
