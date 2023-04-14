@@ -3,6 +3,7 @@ import store from './redux/store';
 import { NavigationContainer } from '@react-navigation/native';
 import RootNavigator from './navigators/RootNavigator';
 import React from 'react';
+import './styles.css';
 // eslint-disable-next-line require-jsdoc
 export default function app() {
   return (
