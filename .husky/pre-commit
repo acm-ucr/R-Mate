@@ -4,7 +4,7 @@
 echo "👾 Let's check your styling, testing and building your project before committing"
 
 # Check Prettier standards
-npm run format ||
+npm run check ||
 (
     echo '😭 Prettier Check Failed. Please run command: "npm run format", and then add changes and try commit again.';
     false;
