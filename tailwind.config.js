@@ -8,7 +8,20 @@ module.exports = {
     './src/app.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        rmate: {
+          blue: '#003DA5',
+          black: '#424242',
+          yellow: '#FFB81C',
+          brown: '#DE783F',
+          gray: '#8F8F8F',
+          white: '#FFFFFF',
+          lightgray: '#CDCDCD',
+          offwhite: '#F5F5F5',
+        },
+      },
+    },
   },
   plugins: [],
 };
