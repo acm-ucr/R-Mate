@@ -10,7 +10,7 @@ const LoginScreen = () => {
       <Text>LoginScreen</Text>
       <TouchableOpacity
         className="flex flex-col mr-3"
-        onPress={() => navigation.navigate('TopNavigator')}
+        onPress={() => navigation.navigate('BottomNavigator')}
       >
         <View className="bg-red-400">
           <Text className="">Click to Login</Text>

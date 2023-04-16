@@ -10,5 +10,5 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": { "eslint-disable-next-line require-jsdoc": "off" }
+  "rules": { "require-jsdoc": "off", "react/prop-types": "off" }
 }

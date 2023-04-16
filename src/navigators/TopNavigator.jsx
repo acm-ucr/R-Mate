@@ -2,7 +2,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import React from 'react';
 import BottomNavigator from './BottomNavigator';
 import profile from '../screens/profile';
-import { Text } from 'react-native';
+import TopBar from '../components/TopBar';
 const screenOptions = {
   headerShown: false,
 };
@@ -10,19 +10,7 @@ const screenOptions = {
 const Tab = createMaterialTopTabNavigator();
 const TopNavigator = () => {
   return (
-    <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarShowLabel: false,
-        tabBarIcon: ({ focused, color, size }) => {
-          if (route.name === 'BottomNavigator') {
-            return <Text>LOGO</Text>;
-          }
-          if (route.name === 'profileScreen') {
-            return <Text>Profile</Text>;
-          }
-        },
-      })}
-    >
+    <Tab.Navigator tabBar={(props) => <TopBar {...props} />}>
       <Tab.Screen name="BottomNavigator" component={BottomNavigator} options={screenOptions} />
       <Tab.Screen name="profileScreen" component={profile} options={screenOptions} />
     </Tab.Navigator>
