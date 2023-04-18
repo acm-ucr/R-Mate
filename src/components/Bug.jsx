@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, Image, Alert, SafeAreaView, TextInput, St
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
+import tw from '../../tailwind.config';
 
 const Bug = () => {
   const navigation = useNavigation();
@@ -25,31 +26,33 @@ const Bug = () => {
         </TouchableOpacity>
         <Image 
           source={require('../../assets/bug.svg')}
-          className='w-7 h-7'
+          className='w-7 h-7 p-3'
         />
       </View>
 
       {/* Texts */}
 
-      <View className='w-full p-6'>
+      <View className='w-full p-5'>
         <Text 
           className='text-black text-[32px] font-bold'
           style={{ fontFamily: 'Poppins_600SemiBold' }}
         > 
-          Thank you for catching this bug! 
+          Thank you for{"\n"}
+          catching this bug! 
         </Text>
 
         <Text
-          className='text-black text-[15px] font-regular'
+          className='text-black text-[15px] font-regular mt-3'
           style={{ fontFamily: 'Poppins_400Regular' }}
         >
-          Please describe the bug below and we will try to fix it ASAP!
+          Please describe the bug below{"\n"}
+          and we will try to fix it ASAP!
         </Text>
 
         
       </View>
 
-      <View className='flex-column w-full h-[35vh] p-6'>
+      <View className='flex-column w-full h-[65vh] p-5'>
         <TextInput
           multiline
           style = {styles.input}
@@ -68,17 +71,21 @@ const Bug = () => {
 
 const styles = StyleSheet.create({
   input: {
+    width: 352,
+    height: 450,
+    fontFamily: 'Poppins_400Regular',
     backgroundColor: 'white',
     borderRadius: 6,
     padding: 10,
     flex: 1
   },
   appButtonContainer: {
-    position: 'absolute',
+    left: 225,
+    marginTop: 25,
     width: 136,
     height: 47,
     elevation: 8,
-    backgroundColor: '#FFB81C',
+    backgroundColor: tw-'rmate-yellow',
     borderRadius: 23.5,
     paddingVertical: 10,
     paddingHorizontal: 12
