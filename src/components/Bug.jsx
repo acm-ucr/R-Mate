@@ -7,18 +7,6 @@ import tw from '../../tailwind.config';
 const Bug = () => {
   const navigation = useNavigation();
   return (
-    // <View className = "bg-rmate-white w-full flex justify-center space-x-2">
-    //   <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-    //     <Feather name="arrow-left" size ={24} color="black" />
-    //     <Image source = {require('../../assets/bug.svg')} />
-    //   </TouchableOpacity>
-    //   <View>
-        
-    //   </View>
-    //   <Text>Bug</Text>
-    // </View>
-    
-
     <SafeAreaView className='bg-[#DEE7F5] w-full h-full'>
       <View className='flex-row w-full p-3'>
         <TouchableOpacity onPress = {() => navigation.navigate('Profile')}>
@@ -85,7 +73,7 @@ const styles = StyleSheet.create({
     width: 136,
     height: 47,
     elevation: 8,
-    backgroundColor: tw-'rmate-yellow',
+    backgroundColor: '#FFB81C',
     borderRadius: 23.5,
     paddingVertical: 10,
     paddingHorizontal: 12
