@@ -1,34 +1,42 @@
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView, Image, TextInput, Pressable } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { AntDesign } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import React from 'react';
 
 const Feedback = () => {
   const navigation = useNavigation();
   return (
-    <View className="w-full flex justify-center items-center">
-      <View className="bg-rmate-lightblue w-full h-[80vh] p-3">
-        <TouchableOpacity className="" onPress={() => navigation.navigate('Profile')}>
-          <AntDesign name="arrowleft" size={24} color="black" />
-        </TouchableOpacity>
-        <View className="w-5/6 flex items-center justify-center h-2/7">
+      <SafeAreaView className="bg-rmate-lightblue w-full h-full">
+        <View className="flex-row w-full p-3">
+          <TouchableOpacity className="" onPress={() => navigation.navigate('Profile')}>
+            <Feather name="arrow-left" size={24} color="rmate-black" />
+          </TouchableOpacity>
+          <Image source={require('../../assets/feedback.svg')} classname="w-7 h-7 p-3" />
+        </View>
+        <View className="w-full p-6">
           <Text
-            className="text-rmate-black text-3xl font-bold my-4"
-            style={{ fontFamily: 'Poppins_400Regular' }}
+            className="text-black text-[32px] font-bold"
+            style={{ fontFamily: 'Poppins_400SemiBold' }}
           >
             Feel free to leave us some feedback!
           </Text>
           <Text
-            className="text-rmate-black text-3xl my-4"
-            style={{ fontFamily: 'Poppins_400Regular', fontSize: 15, f }}
+            className="text-black text-[15px] font-regular mt-3"
+            style={{ fontFamily: 'Poppins_400Regular'}}
           >
             The R&apos;Mate Team is always striving to improve and we appreciate any and all
             feedback!
           </Text>
         </View>
-      </View>
-    </View>
+
+        <View classname="flex-column w-full h-[65vh] p-6">
+          <TextInput multiline placeholder='Feedback'/>
+          <Pressable onPress={() => Alert.alert("Submitted!")}>
+            <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-semibold mt-4">Submit</Text>
+          </Pressable>
+        </View>
+      </SafeAreaView>
   );
 };
 

@@ -19,7 +19,7 @@ module.exports = {
           white: '#FFFFFF',
           lightgray: '#CDCDCD',
           offwhite: '#F5F5F5',
-          lightblue: '#ADD8E6',
+          lightblue: '#DEE7F5',
         },
       },
     },
