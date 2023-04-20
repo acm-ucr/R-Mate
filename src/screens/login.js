@@ -16,14 +16,6 @@ const LoginScreen = () => {
           <Text className="">Click to Login</Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity
-        className="flex flex-col mr-3"
-        onPress={() => navigation.navigate('LoadingScreen')}
-      >
-        <View className="bg-blue-400">
-          <Text className="">Click to Loading Screen</Text>
-        </View>
-      </TouchableOpacity>
     </View>
   );
 };
