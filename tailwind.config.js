@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins'],
+      },
       colors: {
         rmate: {
           blue: '#003DA5',
