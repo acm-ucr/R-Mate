@@ -6,16 +6,18 @@ import { useNavigation } from '@react-navigation/native';
 const LoginScreen = () => {
   const navigation = useNavigation();
   return (
-    <View className="flex flex-col justify-center items-center">
-      <Text>LoginScreen</Text>
-      <TouchableOpacity
-        className="flex flex-col mr-3"
-        onPress={() => navigation.navigate('BottomNavigator')}
-      >
-        <View className="bg-red-400">
-          <Text className="">Click to Login</Text>
-        </View>
-      </TouchableOpacity>
+    <View style={{ flex: 1, borderColor: 'rgba(255, 255, 255, 0.5)', borderWidth: 20, borderRadius: 5 }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#00274C' }}>
+        <Text>LoginScreen</Text>
+        <TouchableOpacity
+          style={{padding: 10, backgroundColor: '#00274C' }}
+          onPress={() => navigation.navigate('BottomNavigator')}
+        >
+          <View>
+            <Text style={{ color: 'white' }}>Click to Login</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
