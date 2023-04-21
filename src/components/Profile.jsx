@@ -57,10 +57,7 @@ const Profile = () => {
         </View>
       </View>
       <View className="w-11/12 mt-4">
-        <Text
-          className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-black"
-          // style={{ fontFamily: 'Poppins_400Regular' }}
-        >
+        <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-poppins-600">
           General
         </Text>
         {general.map((item, index) => (
@@ -80,10 +77,7 @@ const Profile = () => {
             </View>
           </TouchableOpacity>
         ))}
-        <Text
-          className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-semibold mt-4"
-          style={{ fontFamily: 'Poppins_400Regular' }}
-        >
+        <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black mt-4 font-poppins-600">
           Feedback
         </Text>
         {feedback.map((item, index) => (
