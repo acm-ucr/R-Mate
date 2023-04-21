@@ -17,7 +17,7 @@ const BottomBar = ({ state, navigation }) => {
       >
         <Image
           source={require('../../assets/home-line.svg')}
-          className="m-5 w-16 h-16 border-1 rounded-full"
+          className="m-5 w-10 h-10 border-1 rounded-full"
         />
       </TouchableOpacity>
       <TouchableOpacity
@@ -28,7 +28,7 @@ const BottomBar = ({ state, navigation }) => {
       >
         <Image
           source={require('../../assets/calendar-filled.svg')}
-          className="m-5 w-16 h-16 border-1 rounded-full"
+          className="m-5 w-10 h-10 border-1 rounded-full"
         />
       </TouchableOpacity>
       <TouchableOpacity
@@ -39,7 +39,7 @@ const BottomBar = ({ state, navigation }) => {
       >
         <Image
           source={require('../../assets/map-line.svg')}
-          className="m-5 w-16 h-16 border-1 rounded-full"
+          className="m-5 w-10 h-10 border-1 rounded-full"
         />
       </TouchableOpacity>
       <TouchableOpacity
@@ -50,7 +50,7 @@ const BottomBar = ({ state, navigation }) => {
       >
         <Image
           source={require('../../assets/form-line.svg')}
-          className="m-5 w-16 h-16 border-1 rounded-full"
+          className="m-5 w-10 h-10 border-1 rounded-full"
         />
       </TouchableOpacity>
     </View>
