@@ -21,19 +21,17 @@ const Feedback = () => {
         <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
           <Feather name="arrow-left" size={24} color="rmate-black" />
         </TouchableOpacity>
-        <Image source={require('../../assets/feedback.svg')} classname="w-7 h-7 p-3" />
+        <Image source={require('../../assets/feedback.svg')} className="w-7 h-7 p-3" />
       </View>
       <View style={styles.body}>
         <View style={styles.header}>
           <Text
-            className="text-black text-[32px] font-bold"
-            style={{ fontFamily: 'Poppins_400SemiBold' }}
+            className="text-black text-[32px] font-poppins-700"
           >
             Feel free to leave us some feedback!
           </Text>
           <Text
-            className="text-black text-[15px] font-regular"
-            style={{ fontFamily: 'Poppins_400Regular' }}
+            className="text-black text-[15px] font-poppins-400"
           >
             The R&apos;Mate Team is always striving to improve and we appreciate any and all
             feedback!
@@ -45,9 +43,10 @@ const Feedback = () => {
             placeholder="Feedback"
             placeholderTextColor="#6F6D6D"
             style={styles.inputText}
+            className="font-poppins-400"
           />
           <Pressable style={{ alignSelf: 'flex-end' }} onPress={() => Alert.alert('Submitted!')}>
-            <Text style={styles.submitBtn} className="bg-rmate-yellow rounded-full px-4 py-2 w-fit">
+            <Text style={styles.submitBtn} className="bg-rmate-yellow rounded-full px-4 py-2 w-fit font-poppins-700">
               Submit
             </Text>
           </Pressable>
@@ -83,7 +82,6 @@ const styles = StyleSheet.create({
   },
   inputText: {
     height: 450,
-    fontFamily: 'Poppins_400Regular',
     backgroundColor: 'white',
     borderRadius: 6,
     padding: 10,
@@ -92,7 +90,6 @@ const styles = StyleSheet.create({
   submitBtn: {
     textTransform: 'uppercase',
     fontSize: 20,
-    fontFamily: 'Poppins_600SemiBold',
     color: 'black',
     fontWeight: 'bold',
   },
