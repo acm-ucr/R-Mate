@@ -27,7 +27,7 @@ import {
   Poppins_900Black,
   Poppins_900Black_Italic,
 } from '@expo-google-fonts/poppins';
-// eslint-disable-next-line require-jsdoc
+
 export default function app() {
   const [fontsLoaded] = useFonts({
     Poppins_100Thin,
