@@ -25,14 +25,10 @@ const Feedback = () => {
       </View>
       <View style={styles.body}>
         <View style={styles.header}>
-          <Text
-            className="text-black text-[32px] font-poppins-700"
-          >
+          <Text className="text-black text-[32px] font-poppins-700">
             Feel free to leave us some feedback!
           </Text>
-          <Text
-            className="text-black text-[15px] font-poppins-400"
-          >
+          <Text className="text-black text-[15px] font-poppins-400">
             The R&apos;Mate Team is always striving to improve and we appreciate any and all
             feedback!
           </Text>
@@ -46,7 +42,10 @@ const Feedback = () => {
             className="font-poppins-400"
           />
           <Pressable style={{ alignSelf: 'flex-end' }} onPress={() => Alert.alert('Submitted!')}>
-            <Text style={styles.submitBtn} className="bg-rmate-yellow rounded-full px-4 py-2 w-fit font-poppins-700">
+            <Text
+              style={styles.submitBtn}
+              className="bg-rmate-yellow rounded-full px-4 py-2 w-fit font-poppins-700"
+            >
               Submit
             </Text>
           </Pressable>
