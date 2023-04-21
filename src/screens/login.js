@@ -1,21 +1,45 @@
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+// import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
   return (
-    <View style={{ flex: 1, borderColor: 'rgba(255, 255, 255, 0.5)', borderWidth: 20, borderRadius: 5 }}>
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#00274C' }}>
+    <View
+      className="h-screen flex"
+      style={{ borderColor: 'rgba(255, 255, 255, 0.5)', borderWidth: 20, borderRadius: 5 }}
+    >
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#00274C',
+        }}
+      >
+        <Image
+          source={require('../../assets/bellTower.svg')}
+          className="w-32 h-1/2"
+          resizeMode="contain"
+        />
         <Text style={{ position: 'absolute', top: -17, left: 0 }}>Login</Text>
         <TouchableOpacity
-          style={{position: 'absolute', top: 850, backgroundColor: '#D3D3D3', padding: 20, borderRadius: 10, shadowColor: '#000',
+          style={{
+            position: 'absolute',
+            top: 700,
+            backgroundColor: '#D3D3D3',
+            padding: 20,
+            borderRadius: 10,
+            shadowColor: '#000',
             shadowOffset: {
               width: 0,
               height: 2,
             },
-          shadowOpacity: 0.25, shadowRadius: 3.84, elevation: 5}}
+            shadowOpacity: 0.25,
+            shadowRadius: 3.84,
+            elevation: 5,
+          }}
           onPress={() => navigation.navigate('BottomNavigator')}
         >
           <View>
