@@ -1,12 +1,4 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Image,
-  TextInput,
-  Pressable,
-  Alert,
-} from 'react-native';
+import { View, Text, SafeAreaView, Image, TextInput, Pressable, Alert } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
@@ -40,9 +32,7 @@ const Feedback = () => {
             className="flex-1 font-poppins-400 h-450 bg-rmate-white rounded-md p-3"
           />
           <Pressable style={{ alignSelf: 'flex-end' }} onPress={() => Alert.alert('Submitted!')}>
-            <Text
-              className="bg-rmate-yellow rounded-full px-4 py-2 w-fit font-poppins-700 text-xl uppercase text-black"
-            >
+            <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit font-poppins-700 text-xl uppercase text-black">
               Submit
             </Text>
           </Pressable>
