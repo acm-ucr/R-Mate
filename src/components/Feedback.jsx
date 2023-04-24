@@ -1,13 +1,4 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  Image,
-  TextInput,
-  Pressable,
-  Alert,
-} from 'react-native';
+import { View, Text, SafeAreaView, Image, TextInput, Pressable, Alert } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
@@ -16,15 +7,15 @@ import React from 'react';
 const Feedback = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView className="bg-rmate-lightblue min-w-[100%] min-h-[100%]">
       <View className="flex-row w-full p-3">
         <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
           <Feather name="arrow-left" size={24} color="rmate-black" />
         </TouchableOpacity>
         <Image source={require('../../assets/feedback.svg')} className="w-7 h-7 p-3" />
       </View>
-      <View style={styles.body}>
-        <View style={styles.header}>
+      <View className="flex flex-column gap-y-[5vh] w-full h-full px-5">
+        <View className="flex flex-column gap-y-5">
           <Text className="text-black text-[32px] font-poppins-700">
             Feel free to leave us some feedback!
           </Text>
@@ -33,19 +24,15 @@ const Feedback = () => {
             feedback!
           </Text>
         </View>
-        <View style={styles.inputPos}>
+        <View className="flex flex-column gap-y-5 w-full h-[65vh]">
           <TextInput
             multiline
             placeholder="Feedback"
             placeholderTextColor="#6F6D6D"
-            style={styles.inputText}
-            className="font-poppins-400"
+            className="flex-1 font-poppins-400 h-450 bg-rmate-white rounded-md p-3"
           />
           <Pressable style={{ alignSelf: 'flex-end' }} onPress={() => Alert.alert('Submitted!')}>
-            <Text
-              style={styles.submitBtn}
-              className="bg-rmate-yellow rounded-full px-4 py-2 w-fit font-poppins-700"
-            >
+            <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit font-poppins-700 text-xl uppercase text-black">
               Submit
             </Text>
           </Pressable>
@@ -54,44 +41,5 @@ const Feedback = () => {
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#DEE7F5',
-    minWidth: '100%',
-    minHeight: '100%',
-  },
-  body: {
-    width: 'full',
-    height: 'full',
-    padding: 20,
-    flex: 'column',
-    rowGap: '5vh',
-  },
-  header: {
-    flex: 'row',
-    rowGap: 20,
-    p: 6,
-  },
-  inputPos: {
-    flex: 'column',
-    rowGap: 20,
-    width: 'full',
-    height: '65vh',
-  },
-  inputText: {
-    height: 450,
-    backgroundColor: 'white',
-    borderRadius: 6,
-    padding: 10,
-    flex: 1,
-  },
-  submitBtn: {
-    textTransform: 'uppercase',
-    fontSize: 20,
-    color: 'black',
-    fontWeight: 'bold',
-  },
-});
 
 export default Feedback;
