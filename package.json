@@ -27,6 +27,7 @@
     "expo": "~48.0.9",
     "expo-splash-screen": "~0.18.1",
     "expo-status-bar": "~1.4.4",
+    "firebase": "^9.20.0",
     "nativewind": "^2.0.11",
     "postcss": "^8.4.21",
     "postcss-loader": "^4.2.0",
@@ -43,7 +44,8 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "prettier": "^2.8.7"
+    "prettier": "^2.8.7",
+    "react-native-dotenv": "^3.4.8"
   },
   "private": true,
   "eslintConfig": {

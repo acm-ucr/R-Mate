@@ -1,7 +1,7 @@
 import { View, Image } from 'react-native';
 import React from 'react';
 
-const loading = () => {
+const LoadingScreen = () => {
   return (
     <View className="h-full w-full bg-rmate-blue flex justify-center items-center">
       <Image
@@ -13,4 +13,4 @@ const loading = () => {
   );
 };
 
-export default loading;
+export default LoadingScreen;
