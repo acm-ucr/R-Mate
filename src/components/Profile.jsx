@@ -1,10 +1,11 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons, Entypo, Feather } from '@expo/vector-icons';
 import React, { useEffect, useState } from 'react';
 import { db } from '../../firebase';
 import { doc, getDoc } from 'firebase/firestore';
+import ProfileSVG from '../../assets/profilePIC.svg';
 
 const general = [
   {
@@ -51,16 +52,13 @@ const Profile = () => {
   }, []);
 
   return (
-    <View className="w-full flex justify-center items-center">
+    <SafeAreaView className="w-full flex justify-center items-center">
       <View className="bg-rmate-blue w-full h-[35vh] p-3">
         <TouchableOpacity onPress={() => navigation.navigate('BottomNavigator')}>
           <Feather name="x" size={24} color="white" />
         </TouchableOpacity>
         <View className="flex items-center justify-center h-5/6">
-          <Image
-            source={require('../../assets/profilePIC.svg')}
-            className="w-24 h-24 border-1 border-white rounded-full"
-          />
+          <ProfileSVG width={100} height={100} />
           <Text
             className="text-rmate-white text-3xl font-semibold my-4"
             style={{ fontFamily: 'Poppins_400Regular' }}
@@ -111,7 +109,7 @@ const Profile = () => {
           </TouchableOpacity>
         ))}
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -1,8 +1,9 @@
-import { View, Text, SafeAreaView, Image, TextInput, Pressable } from 'react-native';
+import { View, Text, SafeAreaView, TextInput, Pressable } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
 import { React, useState } from 'react';
+import FeedbackSVG from '../../assets/feedback.svg';
 
 const Feedback = () => {
   const [feedback, setFeedback] = useState('');
@@ -22,7 +23,7 @@ const Feedback = () => {
         <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
           <Feather name="arrow-left" size={24} color="rmate-black" />
         </TouchableOpacity>
-        <Image source={require('../../assets/feedback.svg')} className="w-7 h-7 p-3" />
+        <FeedbackSVG />
       </View>
       <View className="flex flex-column gap-y-[5vh] w-full h-full px-5">
         <View className="flex flex-column gap-y-5">
