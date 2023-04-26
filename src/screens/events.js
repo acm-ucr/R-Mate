@@ -3,7 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CalendarEvents from '../components/CalendarEvents';
 import EventPage from '../components/EventPage';
 const eventsStack = createNativeStackNavigator();
-const events = () => {
+
+const EventsScreen = () => {
   return (
     <eventsStack.Navigator>
       <eventsStack.Screen
@@ -16,4 +17,4 @@ const events = () => {
   );
 };
 
-export default events;
+export default EventsScreen;

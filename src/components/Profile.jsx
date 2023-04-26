@@ -2,7 +2,9 @@ import { View, Text, Image } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons, Entypo, Feather } from '@expo/vector-icons';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { db } from '../../firebase';
+import { doc, getDoc } from 'firebase/firestore';
 
 const general = [
   {
@@ -37,6 +39,17 @@ const feedback = [
 
 const Profile = () => {
   const navigation = useNavigation();
+  const [name, setName] = useState('');
+
+  useEffect(() => {
+    const getData = async () => {
+      const docSnap = await getDoc(doc(db, 'test', 'test_id'));
+      console.log(docSnap.data());
+      setName(docSnap.data().name);
+    };
+    getData();
+  }, []);
+
   return (
     <View className="w-full flex justify-center items-center">
       <View className="bg-rmate-blue w-full h-[35vh] p-3">
@@ -52,7 +65,7 @@ const Profile = () => {
             className="text-rmate-white text-3xl font-semibold my-4"
             style={{ fontFamily: 'Poppins_400Regular' }}
           >
-            Ashley Kim
+            {name}
           </Text>
         </View>
       </View>
