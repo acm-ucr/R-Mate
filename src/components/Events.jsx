@@ -4,8 +4,9 @@ import Event from './Event';
 
 const Events = () => {
   const [isExpand, setIsExpand] = useState(false);
+
   return (
-    <View className={`w-full fixed bg-gray-400 bottom-10 ${isExpand ? 'h-[60%]' : 'h-5'}`}>
+    <View className={`w-full fixed bg-gray-400 bottom-10 mt-20 ${isExpand ? 'h-[60%]' : 'h-10'}`}>
       <TouchableOpacity
         onPress={() => {
           setIsExpand(!isExpand);
