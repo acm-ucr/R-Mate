@@ -1,12 +1,13 @@
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
+import UCRLogo from '../../assets/UCRLogo.svg';
 
-const loading = () => {
+const LoadingScreen = () => {
   return (
-    <View>
-      <Text>loading</Text>
+    <View className="h-full w-full bg-rmate-blue flex justify-center items-center">
+      <UCRLogo width={100} height={100} />
     </View>
   );
 };
 
-export default loading;
+export default LoadingScreen;

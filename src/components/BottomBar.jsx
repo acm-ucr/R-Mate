@@ -1,5 +1,6 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import React from 'react';
+import { Image } from 'react-native-web';
 
 const BottomBar = ({ state, navigation }) => {
   const homeScreen = state.routes[0];
@@ -7,14 +8,17 @@ const BottomBar = ({ state, navigation }) => {
   const mapScreen = state.routes[2];
   const surveyScreen = state.routes[3];
   return (
-    <View className="w-full flex flex-row">
+    <View className="w-full flex flex-row justify-around rounded-3xl bg-white">
       <TouchableOpacity
         accessibilityRole="button"
         onPress={() => {
           navigation.navigate(homeScreen.name);
         }}
       >
-        <Text className="bg-red-500">home</Text>
+        <Image
+          source={require('../../assets/home-line.svg')}
+          className="m-5 w-10 h-10 border-1 rounded-full"
+        />
       </TouchableOpacity>
       <TouchableOpacity
         accessibilityRole="button"
@@ -22,7 +26,10 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(eventsScreen.name);
         }}
       >
-        <Text className="bg-blue-500">events</Text>
+        <Image
+          source={require('../../assets/calendar-filled.svg')}
+          className="m-5 w-10 h-10 border-1 rounded-full"
+        />
       </TouchableOpacity>
       <TouchableOpacity
         accessibilityRole="button"
@@ -30,7 +37,10 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(mapScreen.name);
         }}
       >
-        <Text className="bg-green-500">map</Text>
+        <Image
+          source={require('../../assets/map-line.svg')}
+          className="m-5 w-10 h-10 border-1 rounded-full"
+        />
       </TouchableOpacity>
       <TouchableOpacity
         accessibilityRole="button"
@@ -38,7 +48,10 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(surveyScreen.name);
         }}
       >
-        <Text className="bg-purple-500">survey</Text>
+        <Image
+          source={require('../../assets/form-line.svg')}
+          className="m-5 w-10 h-10 border-1 rounded-full"
+        />
       </TouchableOpacity>
     </View>
   );
