@@ -6,7 +6,11 @@ const eventsStack = createNativeStackNavigator();
 const events = () => {
   return (
     <eventsStack.Navigator>
-      <eventsStack.Screen name="Calander" component={CalendarEvents} options={{ headerShown: false }} />
+      <eventsStack.Screen
+        name="Calander"
+        component={CalendarEvents}
+        options={{ headerShown: false }}
+      />
       <eventsStack.Screen name="EventPage" component={EventPage} options={{ headerShown: false }} />
     </eventsStack.Navigator>
   );
