@@ -2,7 +2,6 @@ import {
   View,
   Text,
   TouchableOpacity,
-  Image,
   Alert,
   SafeAreaView,
   TextInput,
@@ -12,6 +11,7 @@ import {
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
+import BugSVG from '../../assets/bug.svg';
 
 const Bug = () => {
   const navigation = useNavigation();
@@ -21,11 +21,8 @@ const Bug = () => {
         <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
           <Feather name="arrow-left" size={24} color="rmate-black" />
         </TouchableOpacity>
-        <Image source={require('../../assets/bug.svg')} className="w-7 h-7 p-3" />
+        <BugSVG />
       </View>
-
-      {/* Texts */}
-
       <View className="w-full p-6">
         <Text
           className="text-black text-[32px] font-bold"
