@@ -15,7 +15,7 @@ const Events = () => {
         <Text>Events</Text>
       </TouchableOpacity>
       {isExpand && (
-        <View>
+        <View className="flex items-center">
           <Event />
           <Event />
           <Event />
