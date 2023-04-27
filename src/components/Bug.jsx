@@ -16,30 +16,32 @@ import BugSVG from '../../assets/bug.svg';
 const Bug = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView className="bg-[#DEE7F5] w-full h-full">
-      <View className="flex-row w-full p-3">
-        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+    <SafeAreaView className="bg-rmate-lightblue w-full h-full">
+      <View className="p-3 w-full">
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Profile')}
+          className="flex flex-row items-center"
+        >
           <Feather name="arrow-left" size={24} color="black" />
+          <BugSVG />
         </TouchableOpacity>
-        <BugSVG />
       </View>
-      <View className="w-full p-6">
+      <View className="w-full p-3">
         <Text
-          className="text-black text-[32px] font-bold"
+          className="text-black text-3xl font-bold"
           style={{ fontFamily: 'Poppins_600SemiBold' }}
         >
           Thank you for catching this bug!
         </Text>
 
         <Text
-          className="text-black text-[15px] font-regular mt-3"
+          className="text-black text-lg font-regular mt-3"
           style={{ fontFamily: 'Poppins_400Regular' }}
         >
           Please describe the bug below and we will try to fix it ASAP!
         </Text>
       </View>
-
-      <View className="flex-column w-full h-[65vh] p-6">
+      <View className="w-full h-[60vh] py-6 px-3">
         <TextInput
           multiline
           style={styles.input}
