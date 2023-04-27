@@ -21,7 +21,7 @@ const Feedback = () => {
     <SafeAreaView className="bg-rmate-lightblue min-w-[100%] min-h-[100%]">
       <View className="flex-row w-full p-3">
         <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-          <Feather name="arrow-left" size={24} color="rmate-black" />
+          <Feather name="arrow-left" size={24} color="black" />
         </TouchableOpacity>
         <FeedbackSVG />
       </View>
