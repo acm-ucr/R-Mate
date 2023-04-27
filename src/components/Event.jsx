@@ -5,10 +5,10 @@ import { useNavigation } from '@react-navigation/native';
 const Event = () => {
   const navigation = useNavigation();
   return (
-    <View className="rounded-xl bg-rmate-lightblue p-2 w-5/6">
+    <View className="rounded-lg bg-rmate-lightblue p-2 w-5/6 my-1">
       <TouchableOpacity onPress={() => navigation.navigate('EventPage')}>
         <View className="flex flex-row ml-2 w-full">
-          <Image source={require('../../assets/resumeWorkShop.png')} className="w-20 h-20" />
+          <Image source={require('../../assets/resumeWorkShop.png')} className="w-20 h-20 mt-1" />
           <View className="pl-2">
             <Text className="font-poppins-600">Resume Workshop with UBA</Text>
             <Text className="text-rmate-gray font-poppins-400">Apr 13th 8 - 9:30PM</Text>
