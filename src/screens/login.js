@@ -15,11 +15,16 @@ const LoginScreen = () => {
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: '#00274C',
+          backgroundColor: '#003DA5',
         }}
       >
         <Image
           source={require('../../assets/bellTower.svg')}
+          className="w-32 h-1/2"
+          resizeMode="contain"
+        />
+         <Image
+          source={require('../../assets/UCLogo.svg')}
           className="w-32 h-1/2"
           resizeMode="contain"
         />
