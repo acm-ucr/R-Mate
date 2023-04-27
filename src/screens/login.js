@@ -30,7 +30,7 @@ const LoginScreen = () => {
             The University of
           </Text>
           <Text className="text-rmate-offwhite text-lg font-poppins-400 ml-2">
-            California, Riverside's
+            California, Riverside&apos;s
           </Text>
           <Text className="text-rmate-offwhite text-lg font-poppins-400 mt-1 ml-2">
             online community!
