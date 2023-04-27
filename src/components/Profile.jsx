@@ -2,9 +2,9 @@ import { View, Text, SafeAreaView } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons, Entypo, Feather } from '@expo/vector-icons';
-import React, { useEffect, useState } from 'react';
-import { db } from '../../firebase';
-import { doc, getDoc } from 'firebase/firestore';
+import React, { useState } from 'react';
+// import { db } from '../../firebase';
+// import { doc, getDoc } from 'firebase/firestore';
 import ProfileSVG from '../../assets/profilePIC.svg';
 
 const general = [
@@ -40,16 +40,16 @@ const feedback = [
 
 const Profile = () => {
   const navigation = useNavigation();
-  const [name, setName] = useState('');
+  const [name] = useState('Name from useState');
 
-  useEffect(() => {
-    const getData = async () => {
-      const docSnap = await getDoc(doc(db, 'test', 'test_id'));
-      console.log(docSnap.data());
-      setName(docSnap.data().name);
-    };
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const docSnap = await getDoc(doc(db, 'test', 'test_id'));
+  //     console.log(docSnap.data());
+  //     setName(docSnap.data().name);
+  //   };
+  //   getData();
+  // }, []);
 
   return (
     <SafeAreaView className="w-full flex justify-center items-center">
