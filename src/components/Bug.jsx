@@ -19,7 +19,7 @@ const Bug = () => {
     <SafeAreaView className="bg-[#DEE7F5] w-full h-full">
       <View className="flex-row w-full p-3">
         <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-          <Feather name="arrow-left" size={24} color="rmate-black" />
+          <Feather name="arrow-left" size={24} color="black" />
         </TouchableOpacity>
         <BugSVG />
       </View>

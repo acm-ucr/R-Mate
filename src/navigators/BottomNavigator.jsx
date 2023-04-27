@@ -14,7 +14,11 @@ const BottomNavigator = () => {
   const screenOptions = {
     headerTitle: (props) => <Text>ucr logo</Text>,
     headerRight: () => (
-      <TouchableOpacity onPress={() => navigation.navigate('Profile')} title="Info" color="#fff">
+      <TouchableOpacity
+        onPress={() => navigation.navigate('ProfileInformation')}
+        title="Info"
+        color="#fff"
+      >
         <Text>Profile</Text>
       </TouchableOpacity>
     ),

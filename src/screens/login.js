@@ -9,30 +9,28 @@ const LoginScreen = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView className="h-full w-full bg-rmate-blue flex flex-col justify-center items-center">
-      <View className="w-full flex flex-row justify-end">
+      <View className="w-full flex flex-row justify-end mr-4">
         <BellTower width={146} height={727} />
       </View>
-      <View className="absolute top-12 left-10 flex flex-row items-center">
+      <View className="absolute top-[10%] left-5 flex flex-row items-center">
         <UCLogo width={50} height={50} />
         <Text className="text-rmate-offwhite text-2xl font-poppins-600 ml-2">RIVERSIDE</Text>
       </View>
       <View className="absolute top-40 left-5 flex flex-col">
-        <Text className="text-rmate-offwhite text-3xl font-poppins-400 ml-2">Welcome to</Text>
+        <Text className="text-rmate-offwhite text-3xl font-poppins-400">Welcome to</Text>
         <View className="flex flex-row">
-          <Text className="text-rmate-yellow text-5xl font-poppins-400 ml-2">R</Text>
-          <Text className="text-rmate-offwhite text-5xl font-poppins-400 ml-2">&apos;Mate</Text>
+          <Text className="text-rmate-yellow text-4xl font-poppins-400">R</Text>
+          <Text className="text-rmate-offwhite text-4xl font-poppins-400">&apos;Mate</Text>
         </View>
         <View className="flex flex-col flex-wrap">
           <Text></Text>
           <Text></Text>
           <Text></Text>
-          <Text className="text-rmate-offwhite text-lg font-poppins-400 ml-2">
-            The University of
-          </Text>
-          <Text className="text-rmate-offwhite text-lg font-poppins-400 ml-2">
+          <Text className="text-rmate-offwhite text-lg font-poppins-400">The University of</Text>
+          <Text className="text-rmate-offwhite text-lg font-poppins-400">
             California, Riverside&apos;s
           </Text>
-          <Text className="text-rmate-offwhite text-lg font-poppins-400 mt-1 ml-2">
+          <Text className="text-rmate-offwhite text-lg font-poppins-400 mt-1">
             online community!
           </Text>
         </View>
