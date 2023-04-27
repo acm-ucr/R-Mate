@@ -1,8 +1,11 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons, Entypo, Feather } from '@expo/vector-icons';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { db } from '../../firebase';
+import { doc, getDoc } from 'firebase/firestore';
+import ProfileSVG from '../../assets/profilePIC.svg';
 
 const general = [
   {
@@ -37,30 +40,35 @@ const feedback = [
 
 const Profile = () => {
   const navigation = useNavigation();
+  const [name, setName] = useState('');
+
+  useEffect(() => {
+    const getData = async () => {
+      const docSnap = await getDoc(doc(db, 'test', 'test_id'));
+      console.log(docSnap.data());
+      setName(docSnap.data().name);
+    };
+    getData();
+  }, []);
+
   return (
-    <View className="w-full flex justify-center items-center">
+    <SafeAreaView className="w-full flex justify-center items-center">
       <View className="bg-rmate-blue w-full h-[35vh] p-3">
         <TouchableOpacity onPress={() => navigation.navigate('BottomNavigator')}>
           <Feather name="x" size={24} color="white" />
         </TouchableOpacity>
         <View className="flex items-center justify-center h-5/6">
-          <Image
-            source={require('../../assets/profilePIC.svg')}
-            className="w-24 h-24 border-1 border-white rounded-full"
-          />
+          <ProfileSVG width={100} height={100} />
           <Text
             className="text-rmate-white text-3xl font-semibold my-4"
             style={{ fontFamily: 'Poppins_400Regular' }}
           >
-            Ashley Kim
+            {name}
           </Text>
         </View>
       </View>
       <View className="w-11/12 mt-4">
-        <Text
-          className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-black"
-          // style={{ fontFamily: 'Poppins_400Regular' }}
-        >
+        <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-poppins-600">
           General
         </Text>
         {general.map((item, index) => (
@@ -80,10 +88,7 @@ const Profile = () => {
             </View>
           </TouchableOpacity>
         ))}
-        <Text
-          className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-semibold mt-4"
-          style={{ fontFamily: 'Poppins_400Regular' }}
-        >
+        <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black mt-4 font-poppins-600">
           Feedback
         </Text>
         {feedback.map((item, index) => (
@@ -104,7 +109,7 @@ const Profile = () => {
           </TouchableOpacity>
         ))}
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

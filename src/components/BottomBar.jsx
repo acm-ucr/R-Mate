@@ -1,5 +1,9 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import React from 'react';
+import HomeLine from '../../assets/home-line.svg';
+import CalendarFilled from '../../assets/calendar-filled.svg';
+import MapLine from '../../assets/map-line.svg';
+import FormLine from '../../assets/form-line.svg';
 
 const BottomBar = ({ state, navigation }) => {
   const homeScreen = state.routes[0];
@@ -7,14 +11,14 @@ const BottomBar = ({ state, navigation }) => {
   const mapScreen = state.routes[2];
   const surveyScreen = state.routes[3];
   return (
-    <View className="w-full flex flex-row">
+    <View className="w-full flex flex-row justify-around rounded-3xl bg-white">
       <TouchableOpacity
         accessibilityRole="button"
         onPress={() => {
           navigation.navigate(homeScreen.name);
         }}
       >
-        <Text className="bg-red-500">home</Text>
+        <HomeLine />
       </TouchableOpacity>
       <TouchableOpacity
         accessibilityRole="button"
@@ -22,7 +26,7 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(eventsScreen.name);
         }}
       >
-        <Text className="bg-blue-500">events</Text>
+        <CalendarFilled />
       </TouchableOpacity>
       <TouchableOpacity
         accessibilityRole="button"
@@ -30,7 +34,7 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(mapScreen.name);
         }}
       >
-        <Text className="bg-green-500">map</Text>
+        <MapLine />
       </TouchableOpacity>
       <TouchableOpacity
         accessibilityRole="button"
@@ -38,7 +42,7 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(surveyScreen.name);
         }}
       >
-        <Text className="bg-purple-500">survey</Text>
+        <FormLine />
       </TouchableOpacity>
     </View>
   );

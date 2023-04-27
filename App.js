@@ -1,10 +1,8 @@
 /* eslint-disable camelcase */
-import { Provider } from 'react-redux';
-import store from './redux/store';
 import { NavigationContainer } from '@react-navigation/native';
-import RootNavigator from './navigators/RootNavigator';
+import RootNavigator from './src/navigators/RootNavigator';
 import React from 'react';
-import './styles.css';
+// import './src/styles.css';
 
 import {
   useFonts,
@@ -27,7 +25,7 @@ import {
   Poppins_900Black,
   Poppins_900Black_Italic,
 } from '@expo-google-fonts/poppins';
-// eslint-disable-next-line require-jsdoc
+
 export default function app() {
   const [fontsLoaded] = useFonts({
     Poppins_100Thin,
@@ -51,11 +49,9 @@ export default function app() {
   });
   if (fontsLoaded) {
     return (
-      <Provider store={store}>
-        <NavigationContainer>
-          <RootNavigator />
-        </NavigationContainer>
-      </Provider>
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
     );
   }
 }

@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const surveys = () => {
+const SurveysScreen = () => {
   return (
     <View>
       <Text>surveys</Text>
@@ -9,4 +9,4 @@ const surveys = () => {
   );
 };
 
-export default surveys;
+export default SurveysScreen;
