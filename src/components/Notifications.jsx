@@ -31,13 +31,13 @@ const Notifications = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView className="bg-rmate-lightblue flex flex-col justify-start">
-      <View className="p-3 h-fit">
+      <View className="p-3">
         <TouchableOpacity
           className="flex flex-row items-center"
           onPress={() => navigation.navigate('Profile')}
         >
           <Feather name="arrow-left" size={24} color="black" />
-          <BellSVG width={30} />
+          <BellSVG width={30} height={30} />
         </TouchableOpacity>
       </View>
       <View className="w-full h-full px-5 mt-4">
