@@ -1,6 +1,9 @@
 import { View, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { Image } from 'react-native-web';
+import HomeLine from '../../assets/home-line.svg';
+import CalendarFilled from '../../assets/calendar-filled.svg';
+import MapLine from '../../assets/map-line.svg';
+import FormLine from '../../assets/form-line.svg';
 
 const BottomBar = ({ state, navigation }) => {
   const homeScreen = state.routes[0];
@@ -15,10 +18,7 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(homeScreen.name);
         }}
       >
-        <Image
-          source={require('../../assets/home-line.svg')}
-          className="m-5 w-10 h-10 border-1 rounded-full"
-        />
+        <HomeLine />
       </TouchableOpacity>
       <TouchableOpacity
         accessibilityRole="button"
@@ -26,10 +26,7 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(eventsScreen.name);
         }}
       >
-        <Image
-          source={require('../../assets/calendar-filled.svg')}
-          className="m-5 w-10 h-10 border-1 rounded-full"
-        />
+        <CalendarFilled />
       </TouchableOpacity>
       <TouchableOpacity
         accessibilityRole="button"
@@ -37,10 +34,7 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(mapScreen.name);
         }}
       >
-        <Image
-          source={require('../../assets/map-line.svg')}
-          className="m-5 w-10 h-10 border-1 rounded-full"
-        />
+        <MapLine />
       </TouchableOpacity>
       <TouchableOpacity
         accessibilityRole="button"
@@ -48,10 +42,7 @@ const BottomBar = ({ state, navigation }) => {
           navigation.navigate(surveyScreen.name);
         }}
       >
-        <Image
-          source={require('../../assets/form-line.svg')}
-          className="m-5 w-10 h-10 border-1 rounded-full"
-        />
+        <FormLine />
       </TouchableOpacity>
     </View>
   );

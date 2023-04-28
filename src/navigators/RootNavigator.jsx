@@ -12,7 +12,7 @@ const screenOptions = {
 const RootNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="LoginScreen">
-      <Stack.Screen name="Profile" component={profile} options={screenOptions} />
+      <Stack.Screen name="ProfileInformation" component={profile} options={screenOptions} />
       <Stack.Screen name="BottomNavigator" component={BottomNavigator} options={screenOptions} />
       <Stack.Screen name="LoadingScreen" component={loading} options={screenOptions} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} options={screenOptions} />
