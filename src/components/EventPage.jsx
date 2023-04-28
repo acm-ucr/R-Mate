@@ -25,9 +25,9 @@ const EventPage = () => {
 
           <Text className="text-sm font-poppins-300">
             RA program: UBA Resume Workshop. Happy week 5 everyone! We are excited to announce that
-            this Thursday in partnership with UCR's Undergraduate Business Association. We will be
+            this Thursday in partnership with UCR Undergraduate Business Association. We will be
             hosting a resume workshop on February 9th from 8:00 PM-9:30 PM in the East Lothian
-            Galley! Learn tips and tricks that scored our UBA panelist's jobs at Google, Amazon,
+            Galley! Learn tips and tricks that scored our UBA panelist jobs at Google, Amazon,
             Intel, PC, Cohnreznick, and many more. Be sure to bring your laptops and resumes! We
             hope to see you all there!!
           </Text>
