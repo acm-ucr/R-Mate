@@ -27,7 +27,7 @@ const CalendarEvents = () => {
     today: "Today",
   };
 
-  LocaleConfig.defaultLocale = 'fr';
+  LocaleConfig.defaultLocale = 'cstm';
 
  const getCurrentDate = () => {
    const date = new Date().getDate();
@@ -39,41 +39,37 @@ const CalendarEvents = () => {
    return year + "-" + month + "-" + date; 
  }
 
- console.log(getCurrentDate())
 const [selected, setSelected] = useState(getCurrentDate());
+const markedDates ={
+  '2023-04-02': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
+  '2023-04-03': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
+  '2023-04-04': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
+  '2023-04-05': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
+  '2023-04-07': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
+  '2023-04-14': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
+};
 
-console.log(selected)
   return (
     <View className="w-full h-full bg-rmate-blue">
       <Calendar
-      hideArrows={false}
+        hideArrows={false}
         onDayPress={(day) => {
           setSelected(day.dateString);
-          console.log(day.dateString)
         }}
-        markedDates={{
-          [selected]: { selected: true, disableTouchEvent: true, selectedDotColor: 'orange' },
-          '2023-04-02': { marked: true, dotColor: "#FFB81C", activeOpacity: 0 },
-          '2023-04-03': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
-          '2023-04-04': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
-          '2023-04-05': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
-          '2023-04-07': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
-          '2023-04-14': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
-          '2023-04-21': { marked: true, dotColor: '#FFB81C', activeOpacity: 0 },
-        }}
+        markedDates={{ ...markedDates, [selected]: { selected: true, disableTouchEvent: true, } }}
         theme={{
           backgroundColor: '#003DA5',
           calendarBackground: '#003DA5',
           textSectionTitleColor: '#FFFFFF',
-          todayTextColor: '#FFFFFF',
           selectedDayBackgroundColor: '#FFB81C',
           dayTextColor: '#FFFFFF',
+          todayTextColor: '#FFFFFF',
           monthTextColor: '#FFFFFF',
           textMonthFontWeight: 'bold',
           textMonthFontSize: 30,
           textDayFontWeight: 'bold',
           textDayHeaderFontWeight: 'bold',
-          disabledArrowColor: '#FFFFFF',
+          arrowColor: '#FFFFFF',
         }}
       />
       <Events />
