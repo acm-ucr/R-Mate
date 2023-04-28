@@ -1,7 +1,6 @@
 import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { MaterialIcons, MaterialCommunityIcons, Entypo, Feather } from '@expo/vector-icons';
 import { useState } from 'react';
 import ProfileSVG from '../../assets/profilePIC.svg';
 
