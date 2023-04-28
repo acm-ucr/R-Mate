@@ -10,14 +10,14 @@ const Account = () => {
   const [netid] = useState('net004');
   const [email] = useState('email@gmail.com');
   return (
-    <SafeAreaView className="bg-rmate-lightblue w-full h-full">
+    <SafeAreaView className="bg-rmate-lightblue w-full h-full flex justify-start items-center">
       <TouchableOpacity className="" onPress={() => navigation.navigate('Profile')}>
         <View>
           <Text className="text-rmate-black">Back</Text>
         </View>
       </TouchableOpacity>
-      <View className="flex items-center pt-10">
-        <View className="flex justify-center bg-rmate-white border-2 border-white rounded-3xl w-full h-[70vh] p-4">
+      <View className="flex items-center w-11/12">
+        <View className="flex justify-center bg-rmate-white border-2 border-white rounded-3xl w-full p-4">
           <Text className="text-rmate-black font-bold text-2xl">Your Account</Text>
           <View className="flex justify-center items-center my-8">
             <ProfileSVG width={150} height={150} />
