@@ -2,7 +2,7 @@ import { View, Text } from 'react-native';
 import React from 'react';
 import ResourcesCard from '../components/ResourcesCard';
 
-const home = () => {
+const HomeScreen = () => {
   return (
     <View>
       <Text>home</Text>
@@ -12,4 +12,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default HomeScreen;

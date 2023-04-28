@@ -39,6 +39,7 @@ module.exports = {
           white: '#FFFFFF',
           lightgray: '#CDCDCD',
           offwhite: '#F5F5F5',
+          lightblue: '#DEE7F5',
         },
       },
     },

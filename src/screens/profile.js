@@ -9,7 +9,7 @@ const screenOptions = {
   headerShown: false,
 };
 const ProfileStack = createNativeStackNavigator();
-const profile = () => {
+const ProfileScreen = () => {
   return (
     <ProfileStack.Navigator>
       <ProfileStack.Screen name="Profile" component={Profile} options={screenOptions} />
@@ -21,4 +21,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default ProfileScreen;
