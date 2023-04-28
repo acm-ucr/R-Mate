@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
+import Welcome from '../components/Welcome';
 
-const HomeScreen = () => {
+const HomeScreen = ({ name }) => {
   return (
-    <View>
-      <Text>home</Text>
+    <View className="w-full flex flex-row">
+      <Welcome name="Ashley" />
     </View>
   );
 };
