@@ -7,12 +7,13 @@ import surveys from '../screens/surveys';
 import BottomBar from '../components/BottomBar';
 import { useNavigation } from '@react-navigation/native';
 import { Text, TouchableOpacity } from 'react-native';
+import UCRNavbarLogo from '../../assets/UCRNavbarLogo.svg';
 
 const BottomNavigator = () => {
   const navigation = useNavigation();
   const Tab = createBottomTabNavigator();
   const screenOptions = {
-    headerTitle: (props) => <Text>ucr logo</Text>,
+    headerTitle: (props) => <UCRNavbarLogo width={124} height={37} />,
     headerRight: () => (
       <TouchableOpacity
         onPress={() => navigation.navigate('ProfileInformation')}
