@@ -48,8 +48,13 @@ const Bug = () => {
           placeholderTextColor="#6F6D6D"
         />
 
-        <Pressable onPress={() => Alert.alert('Submitted!')} className="self-end w-1/3 bg-rmate-yellow rounded-3xl p-2.5 mt-6 leading-8">
-          <Text className="text-xl poppins-600 text-rmate-black font-bold self-center normalcase">Submit</Text>
+        <Pressable
+          onPress={() => Alert.alert('Submitted!')}
+          className="self-end w-1/3 bg-rmate-yellow rounded-3xl p-2.5 mt-6 leading-8"
+        >
+          <Text className="text-xl poppins-600 text-rmate-black font-bold self-center normalcase">
+            Submit
+          </Text>
         </Pressable>
       </View>
     </SafeAreaView>

@@ -6,8 +6,8 @@ const HomeScreen = () => {
   return (
     <View>
       <Text>home</Text>
-      <ResourcesCard text = "Health" icon = {require('../../assets/Health.svg')}/>
-      <ResourcesCard text = "SRC" icon = {require('../../assets/SRC.svg')}/>
+      <ResourcesCard text="Health" icon={require('../../assets/Health.svg')} />
+      <ResourcesCard text="SRC" icon={require('../../assets/SRC.svg')} />
     </View>
   );
 };
