@@ -76,9 +76,11 @@ const Profile = () => {
       </View>
       <View className="bg-rmate-offwhite w-full flex flex-row justify-center">
         <View className="w-11/12 mt-4">
-          <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-poppins-600">
-            General
-          </Text>
+          <View className="flex flex-row">
+            <View className="bg-rmate-yellow rounded-full px-4 py-2 mt-4">
+              <Text className=" text-black font-poppins-600">General</Text>
+            </View>
+          </View>
           {general.map((item, index) => (
             <TouchableOpacity
               key={index}
@@ -96,9 +98,12 @@ const Profile = () => {
               </View>
             </TouchableOpacity>
           ))}
-          <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black mt-4 font-poppins-600">
-            Feedback
-          </Text>
+          <View className="flex flex-row">
+            <View className="bg-rmate-yellow rounded-full px-4 py-2 mt-4">
+              <Text className=" text-black font-poppins-600">Feedback</Text>
+            </View>
+          </View>
+
           {feedback.map((item, index) => (
             <TouchableOpacity
               key={index}
