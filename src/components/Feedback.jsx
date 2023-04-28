@@ -48,9 +48,7 @@ const Feedback = () => {
           />
           <Pressable style={{ alignSelf: 'flex-end' }} onPress={handleSubmit} className="mt-4">
             <View className="bg-rmate-yellow rounded-full px-4 py-2 w-fit">
-              <Text className="font-poppins-700 text-sm uppercase text-black">
-                Submit
-              </Text>
+              <Text className="font-poppins-700 text-sm uppercase text-black">Submit</Text>
             </View>
           </Pressable>
         </View>
