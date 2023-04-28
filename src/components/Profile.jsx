@@ -52,8 +52,8 @@ const Profile = () => {
   // }, []);
 
   return (
-    <SafeAreaView className="w-full flex justify-center items-center">
-      <View className="bg-rmate-blue w-full h-[35vh] p-3">
+    <SafeAreaView className="w-full flex justify-center items-center bg-rmate-blue">
+      <View className="w-full h-[35vh] p-3">
         <TouchableOpacity onPress={() => navigation.navigate('BottomNavigator')}>
           <Feather name="x" size={24} color="white" />
         </TouchableOpacity>
@@ -67,47 +67,49 @@ const Profile = () => {
           </Text>
         </View>
       </View>
-      <View className="w-11/12 mt-4">
-        <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-poppins-600">
-          General
-        </Text>
-        {general.map((item, index) => (
-          <TouchableOpacity
-            key={index}
-            onPress={() => navigation.navigate(item.navigation)}
-            className="my-3"
-          >
-            <View className="flex flex-row items-center justify-between">
-              <View className="flex flex-row items-center">
-                {item.icon}
-                <Text className="mx-2" style={{ fontFamily: 'Poppins_400Regular' }}>
-                  {item.text}
-                </Text>
+      <View className="bg-rmate-offwhite w-full flex flex-row justify-center">
+        <View className="w-11/12 mt-4">
+          <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-poppins-600">
+            General
+          </Text>
+          {general.map((item, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => navigation.navigate(item.navigation)}
+              className="my-3"
+            >
+              <View className="flex flex-row items-center justify-between">
+                <View className="flex flex-row items-center">
+                  {item.icon}
+                  <Text className="mx-2" style={{ fontFamily: 'Poppins_400Regular' }}>
+                    {item.text}
+                  </Text>
+                </View>
+                <MaterialIcons name="keyboard-arrow-right" size={24} color="black" />
               </View>
-              <MaterialIcons name="keyboard-arrow-right" size={24} color="black" />
-            </View>
-          </TouchableOpacity>
-        ))}
-        <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black mt-4 font-poppins-600">
-          Feedback
-        </Text>
-        {feedback.map((item, index) => (
-          <TouchableOpacity
-            key={index}
-            onPress={() => navigation.navigate(item.navigation)}
-            className="my-3"
-          >
-            <View className="flex flex-row items-center justify-between">
-              <View className="flex flex-row items-center">
-                {item.icon}
-                <Text className="mx-2" style={{ fontFamily: 'Poppins_400Regular' }}>
-                  {item.text}
-                </Text>
+            </TouchableOpacity>
+          ))}
+          <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black mt-4 font-poppins-600">
+            Feedback
+          </Text>
+          {feedback.map((item, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => navigation.navigate(item.navigation)}
+              className="my-3"
+            >
+              <View className="flex flex-row items-center justify-between">
+                <View className="flex flex-row items-center">
+                  {item.icon}
+                  <Text className="mx-2" style={{ fontFamily: 'Poppins_400Regular' }}>
+                    {item.text}
+                  </Text>
+                </View>
+                <MaterialIcons name="keyboard-arrow-right" size={24} color="black" />
               </View>
-              <MaterialIcons name="keyboard-arrow-right" size={24} color="black" />
-            </View>
-          </TouchableOpacity>
-        ))}
+            </TouchableOpacity>
+          ))}
+        </View>
       </View>
     </SafeAreaView>
   );
