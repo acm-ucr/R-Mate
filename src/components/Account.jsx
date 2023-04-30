@@ -18,17 +18,17 @@ const Account = () => {
       </TouchableOpacity>
       <View className="flex items-center w-11/12">
         <View className="flex justify-center bg-rmate-white border-2 border-white rounded-3xl w-full p-4">
-          <Text className="text-rmate-black font-bold text-2xl">Your Account</Text>
+          <Text className="text-rmate-black font-poppins-700 text-2xl">Your Account</Text>
           <View className="flex justify-center items-center my-8">
             <ProfileSVG width={150} height={150} />
           </View>
-          <Text className="text-rmate-black text-2xl font-bold">{name}</Text>
-          <Text className="text-rmate-blue font-medium pb-2">Student</Text>
+          <Text className="text-rmate-black text-2xl font-poppins-600">{name}</Text>
+          <Text className="text-rmate-blue font-poppins-500 pb-2">Student</Text>
           <View className="flex justify-center bg-rmate-lightblue border-2 border-white rounded-t-2xl">
-            <Text className="text-rmate-black text-xl font-semibold p-4">NetID: {netid}</Text>
+            <Text className="text-rmate-black text-xl font-poppins-500 p-4">NetID: {netid}</Text>
           </View>
           <View className="flex justify-center bg-rmate-lightblue border-2 border-white rounded-b-2xl">
-            <Text className="text-rmate-black text-xl font-semibold p-4">Email: {email}</Text>
+            <Text className="text-rmate-black text-xl font-poppins-500 p-4">Email: {email}</Text>
           </View>
         </View>
       </View>
