@@ -2,7 +2,8 @@ import { View, Text, SafeAreaView } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons, Entypo, Feather } from '@expo/vector-icons';
-import React, { useState } from 'react';
+import React, { /* useState, */ useContext } from 'react';
+import RMateContext from './RMateContext';
 // import { db } from '../../firebase';
 // import { doc, getDoc } from 'firebase/firestore';
 import ProfileSVG from '../../assets/profilePIC.svg';
@@ -19,7 +20,7 @@ const general = [
     icon: <MaterialCommunityIcons name="bell-outline" size={24} color="black" />,
   },
   {
-    navigation: 'LoginScreen',
+    navigation: 'LogoutScreen',
     text: 'Click to Logout',
     icon: <MaterialIcons name="logout" size={24} color="black" />,
   },
@@ -40,7 +41,13 @@ const feedback = [
 
 const Profile = () => {
   const navigation = useNavigation();
-  const [name] = useState('Name from useState');
+  const { user } = useContext(RMateContext);
+
+  if (!user) {
+    console.log('oops');
+  }
+
+  // const [name] = useState('Name from useState');
 
   // useEffect(() => {
   //   const getData = async () => {
@@ -63,15 +70,17 @@ const Profile = () => {
             className="text-rmate-white text-3xl font-semibold my-4"
             style={{ fontFamily: 'Poppins_400Regular' }}
           >
-            {name}
+            {user.name}
           </Text>
         </View>
       </View>
       <View className="bg-rmate-offwhite w-full flex flex-row justify-center">
         <View className="w-11/12 mt-4">
-          <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black font-poppins-600">
-            General
-          </Text>
+          <View className="flex flex-row">
+            <View className="bg-rmate-yellow rounded-full px-4 py-2 mt-4">
+              <Text className=" text-black font-poppins-600">General</Text>
+            </View>
+          </View>
           {general.map((item, index) => (
             <TouchableOpacity
               key={index}
@@ -89,9 +98,12 @@ const Profile = () => {
               </View>
             </TouchableOpacity>
           ))}
-          <Text className="bg-rmate-yellow rounded-full px-4 py-2 w-fit text-black mt-4 font-poppins-600">
-            Feedback
-          </Text>
+          <View className="flex flex-row">
+            <View className="bg-rmate-yellow rounded-full px-4 py-2 mt-4">
+              <Text className=" text-black font-poppins-600">Feedback</Text>
+            </View>
+          </View>
+
           {feedback.map((item, index) => (
             <TouchableOpacity
               key={index}
