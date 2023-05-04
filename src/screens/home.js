@@ -6,14 +6,11 @@ import HealthSVG from '../../assets/Health.svg';
 
 const HomeScreen = ({ name }) => {
   return (
-    <View className="w-full flex flex-row">
+    <View className="w-full flex flex-col bg-blue-500 h-full">
       <Welcome name="Hailey" />
-      <Text>home</Text>
       <ResourcesCard text="Health" icon={HealthSVG} />
-      <ResourcesCard text="Stuff" icon={require('../../assets/SRC.svg')} />
     </View>
   );
 };
 
 export default HomeScreen;
-
