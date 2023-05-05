@@ -11,7 +11,7 @@ const BottomBar = ({ state, navigation }) => {
   const mapScreen = state.routes[2];
   const surveyScreen = state.routes[3];
   return (
-    <View className="w-full flex flex-row justify-around rounded-3xl bg-white">
+    <View className="w-full h-20 flex flex-row justify-around gap-y-5 bg-white">
       <TouchableOpacity
         accessibilityRole="button"
         onPress={() => {
