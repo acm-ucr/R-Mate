@@ -40,6 +40,7 @@ module.exports = {
           lightgray: '#CDCDCD',
           offwhite: '#F5F5F5',
           lightblue: '#DEE7F5',
+          midblue: '#5A8BDF',
         },
       },
     },
