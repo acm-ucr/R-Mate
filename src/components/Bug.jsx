@@ -14,7 +14,7 @@ import BugSVG from '../../assets/bug.svg';
 import { useState } from 'react';
 
 const Bug = () => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const navigation = useNavigation();
   return (
     <SafeAreaView className="bg-rmate-lightblue w-full h-full">
@@ -49,8 +49,8 @@ const Bug = () => {
           placeholder="Description"
           placeholderTextColor="#6F6D6D"
           value={message}
-          onChangeText = {(text)=>{
-            setMessage(text)
+          onChangeText={(text) => {
+            setMessage(text);
           }}
         />
 
