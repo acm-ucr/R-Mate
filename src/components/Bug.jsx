@@ -11,8 +11,10 @@ import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import BugSVG from '../../assets/bug.svg';
+import { useState } from 'react';
 
 const Bug = () => {
+  const [message, setMessage] = useState('');
   const navigation = useNavigation();
   return (
     <SafeAreaView className="bg-rmate-lightblue w-full h-full">
@@ -40,10 +42,14 @@ const Bug = () => {
           className="h-full font-poppins-400 bg-rmate-white rounded-md p-2.5 flex-1"
           placeholder="Description"
           placeholderTextColor="#6F6D6D"
+          value={message}
+          onChangeText={(text) => {
+            setMessage(text);
+          }}
         />
 
         <Pressable
-          onPress={() => Alert.alert('Submitted!')}
+          onPress={() => Alert.alert(message)}
           className="self-end w-1/3 bg-rmate-yellow rounded-3xl p-2.5 mt-6 leading-8"
         >
           <Text className="text-xl font-poppins-700 text-rmate-black self-center normalcase">
