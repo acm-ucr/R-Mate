@@ -22,11 +22,10 @@ const MapScreen = () => {
   }, []);
 
   onMapReady = () => {
-    console.log(location);
     mapRef.current.animateCamera({
       center: {
-        latitude: location.coords.latitude,
-        longitude: location.coords.longitude,
+        latitude: location.coords.latitude || 33.97521,
+        longitude: location.coords.longitude || -117.33255,
       },
     });
 
