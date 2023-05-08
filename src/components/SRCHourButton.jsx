@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const SRCHourButton = () => {
+const SRCHourButton = ({ status }) => {
   return (
     <View>
       <Text>SRCHourButton</Text>
