@@ -9,6 +9,12 @@ const SRCHourButton = ({ status }) => {
     case 'open':
       style = 'bg-green-500 text-white';
       text = 'Open';
+    case 'closing soon':
+      style = 'bg-yellow-500 text-white';
+      text = 'Closing Soon';
+    case 'closed':
+      style = 'bg-red-500 text-white';
+      text = 'Closed';
   }
 
   return (
