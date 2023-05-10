@@ -10,7 +10,8 @@
     "format": "npx prettier --write .",
     "check": "npx prettier --check .",
     "eslint": "eslint . --ext js --ext jsx --ext ts --ext tsx",
-    "build": "expo prebuild"
+    "build": "expo prebuild",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@expo-google-fonts/poppins": "^0.2.3",
@@ -56,7 +57,8 @@
     "eslint-plugin-react": "^7.32.2",
     "prettier": "^2.8.7",
     "react-native-dotenv": "^3.4.8",
-    "react-native-svg-transformer": "^1.0.0"
+    "react-native-svg-transformer": "^1.0.0",
+    "husky": "^8.0.0"
   },
   "private": true,
   "eslintConfig": {
