@@ -4,7 +4,7 @@ import { CircularProgress } from 'react-native-circular-progress';
 import { useState } from 'react';
 
 const SRCCountCard = () => {
-  const [fill] = useState(40);
+  const [fill, setFill] = useState(40);
   return (
     <View className="bg-rmate-white m-2 p-3 rounded-xl">
       <View className="flex justify-between flex-row">
