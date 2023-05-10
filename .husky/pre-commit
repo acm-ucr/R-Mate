@@ -1,21 +1,4 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
-echo "👾 Let's check your styling, testing and building your project before committing"
-
-# Check Prettier standards
-npm run check ||
-(
-    echo '😭 Prettier Check Failed. Please run command: "npm run format", and then add changes and try commit again.';
-    false;
-)
-
-# Check ESLint Standards
-npm run eslint ||
-(
-        echo '😤 ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false; 
-)
-
-
-echo '✅ good job! You passed all the checks!🥳'
+npm test
