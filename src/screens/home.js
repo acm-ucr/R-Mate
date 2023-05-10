@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, Dimensions, SafeAreaView, StyleSheet } from 'react-native';
+import { View, FlatList, SafeAreaView } from 'react-native';
 import React from 'react';
 import Welcome from '../components/Welcome';
 import ResourcesCard from '../components/ResourcesCard';
@@ -6,8 +6,6 @@ import HealthSVG from '../../assets/Health.svg';
 import srcSVG from '../../assets/SRC.svg';
 import LibrarySVG from '../../assets/Library.svg';
 import DirectorySVG from '../../assets/phone.svg';
-
-const screenWidth = Dimensions.get("window").width;
 
 const resources = [
   {
@@ -48,27 +46,14 @@ const resources = [
   },
 ];
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  inputContainer: {
-    width: screenWidth,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    padding: 12
-  }
-})
-
 const HomeScreen = ({ name }) => {
   return (
     <View className="w-full flex flex-col bg-rmate-lightblue h-full">
       <Welcome name="Hailey" />
-        <SafeAreaView style={styles.container}>
-          <View style={styles.inputContainer}>
+        <SafeAreaView className = "flex items-center justify-center">
+          <View className = "w-full p-2">
             <FlatList
-              className="w-full flex p-2 bg-rmate-blue"
+              className="w-full flex p-2"
               data={resources}
               ItemSeparatorComponent={() => <View style={{ height: 5}}/>}
               numColumns={4}
