@@ -1,11 +1,11 @@
 import { View, FlatList, SafeAreaView } from 'react-native';
 import React from 'react';
 import Welcome from '../components/Welcome';
+import DirectorySVG from '../../assets/phone.svg';
 import ResourcesCard from '../components/ResourcesCard';
 import HealthSVG from '../../assets/Health.svg';
 import srcSVG from '../../assets/SRC.svg';
 import LibrarySVG from '../../assets/Library.svg';
-import DirectorySVG from '../../assets/phone.svg';
 
 const resources = [
   {

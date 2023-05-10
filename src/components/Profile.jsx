@@ -20,7 +20,7 @@ const general = [
     icon: <MaterialCommunityIcons name="bell-outline" size={24} color="black" />,
   },
   {
-    navigation: 'LoginScreen',
+    navigation: 'LogoutScreen',
     text: 'Click to Logout',
     icon: <MaterialIcons name="logout" size={24} color="black" />,
   },
