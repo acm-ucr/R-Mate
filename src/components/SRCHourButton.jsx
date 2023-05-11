@@ -4,34 +4,21 @@ import { AntDesign } from '@expo/vector-icons';
 
 const SRCHourButton = () => {
   const [showHours, setShowHours] = useState(false);
-  const [currentTime, setCurrentTime] = useState(new Date().getHours());
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTime(new Date().getHours());
+      setCurrentTime(new Date());
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
-  console.log(currentTime);
-  // let style = '';
-  // let text = '';
-
-  // switch () {
-  //   case 'open':
-  //     style = 'bg-green-500 text-white';
-  //     text = 'Open';
-  //   case 'closing soon':
-  //     style = 'bg-yellow-500 text-white';
-  //     text = 'Closing Soon';
-  //   case 'closed':
-  //     style = 'bg-red-500 text-white';
-  //     text = 'Closed';
-  //   default:
-  //     style = '';
-  //     text = '';
-  // }
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const hour = currentTime.getHours();
+  const currentDay = currentTime.getDay();
+  console.log(days[currentDay]);
+  console.log(hour);
 
   return (
     <View className="rounded-lg">
