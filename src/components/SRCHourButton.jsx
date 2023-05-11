@@ -35,6 +35,75 @@ const SRCHourButton = () => {
     }
     if (currentTime.getTime() >= openMT.getTime()) {
       text = 'Open';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-open rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-open font-poppins-500 my-1';
+      arrowColor = '#43b300';
+    }
+  }
+
+  if (currentDay === 5) {
+    if (currentTime.getHours() > 19 || currentTime.getTime() < openMT.getTime()) {
+      text = 'Closed';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-close rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-close font-poppins-500 my-1';
+      arrowColor = '#df7740';
+    }
+    if (currentTime.getTime() >= openMT.getTime()) {
+      text = 'Open';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-open rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-open font-poppins-500 my-1';
+      arrowColor = '#43b300';
+    }
+  }
+
+  if (currentDay === 6) {
+    if (currentTime.getHours() > 19 || currentTime.getHours() < 15) {
+      text = 'Closed';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-close rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-close font-poppins-500 my-1';
+      arrowColor = '#df7740';
+    }
+    if (19 - currentTime.getHours() === 1) {
+      text = 'Closing Soon';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-soon rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-soon font-poppins-500 my-1';
+      arrowColor = '#feb81d';
+    }
+    if (currentTime.getHours() >= 15) {
+      text = 'Open';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-open rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-open font-poppins-500 my-1';
+      arrowColor = '#43b300';
+    }
+  }
+
+  if (currentDay === 0) {
+    if (currentTime.getHours() > 23 || currentTime.getHours() < 15) {
+      text = 'Closed';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-close rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-close font-poppins-500 my-1';
+      arrowColor = '#df7740';
+    }
+    if (23 - currentTime.getHours() === 1) {
+      text = 'Closing Soon';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-soon rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-soon font-poppins-500 my-1';
+      arrowColor = '#feb81d';
+    }
+    if (currentTime.getHours() >= 15) {
+      text = 'Open';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-open rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-open font-poppins-500 my-1';
+      arrowColor = '#43b300';
     }
   }
 
@@ -86,7 +155,7 @@ const SRCHourButton = () => {
           </View>
           <View className="flex flex-row justify-between py-1">
             <Text className="text-rmate-white font-poppins-600">Friday</Text>
-            <Text className="text-rmate-white font-poppins-600">6:30am - 11pm</Text>
+            <Text className="text-rmate-white font-poppins-600">6:30am - 7pm</Text>
           </View>
           <View className="flex flex-row justify-between py-1">
             <Text className="text-rmate-white font-poppins-600">Saturday</Text>
