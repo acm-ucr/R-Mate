@@ -14,11 +14,28 @@ const SRCHourButton = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const hour = currentTime.getHours();
   const currentDay = currentTime.getDay();
-  console.log(days[currentDay]);
-  console.log(hour);
+  const openMT = new Date();
+  openMT.setHours(6);
+  openMT.setMinutes(30);
+  // const closeMT = new Date();
+  // openMT.setHours(5);
+  // openMT.setMinutes(0);
+  let text = '';
+  let buttonStyle = '';
+  let textStyle = '';
+
+  if (currentDay > 0 && currentDay < 5) {
+    if (currentTime.getHours() > 23 || currentTime.getTime() < openMT.getTime()) {
+      text = 'Closed';
+      buttonStyle =
+        'flex flex-row items-center bg-rmate-white border-2 border-[#83c959] rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-[#83c959] font-poppins-500 my-1';
+    }
+    if (currentTime.getTime() >= openMT.getTime()) {
+      text = 'Open';
+    }
+  }
 
   return (
     <View className="rounded-lg">
@@ -27,8 +44,8 @@ const SRCHourButton = () => {
           setShowHours(!showHours);
         }}
       >
-        <View className="flex flex-row items-center bg-rmate-white border-2 border-[#83c959] rounded-full px-2 justify-between w-1/3">
-          <Text className="text-[#83c959] font-poppins-500 my-1">Closing Soon</Text>
+        <View className={buttonStyle}>
+          <Text className={textStyle}>{text}</Text>
           <View className="">
             {showHours ? (
               <AntDesign name="caretdown" size={10} />
