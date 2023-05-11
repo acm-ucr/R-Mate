@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import { AntDesign } from '@expo/vector-icons';
 
-const SRCHourButton = ({ status }) => {
+const SRCHourButton = () => {
   const [showHours, setShowHours] = useState(false);
 
   // let style = '';
