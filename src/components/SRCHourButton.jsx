@@ -31,9 +31,7 @@ const SRCHourButton = ({ status }) => {
         }}
       >
         <View className="flex flex-row items-center bg-rmate-white border-2 border-[#83c959] rounded-full px-2 justify-between w-1/3">
-          <View>
-            <Text className="text-[#83c959] font-poppins-500 my-1">Closing Soon</Text>
-          </View>
+          <Text className="text-[#83c959] font-poppins-500 my-1">Closing Soon</Text>
           <View className="">
             {showHours ? (
               <AntDesign name="caretdown" size={10} />
@@ -47,9 +45,9 @@ const SRCHourButton = ({ status }) => {
       {showHours && (
         <View className="bg-rmate-blue w-11/12 rounded-md p-3">
           <View className="flex flex-row justify-between py-1">
-            <Text className="text-rmate-white font-poppins-600 text-lg">Daily Hours</Text>
-            <View className="flex flex-row bg-rmate-yellow rounded-full justify-between items-center px-2">
-              <Text className="text-rmate-white font-poppins-500 text-xs my-0.5">
+            <Text className="text-rmate-white font-poppins-700 text-xl">Daily Hours</Text>
+            <View className="flex flex-row bg-rmate-yellow rounded-full items-center justify-between px-2">
+              <Text className="text-rmate-white font-poppins-500 text-xs my-0.5 pr-2">
                 All SRC Hours
               </Text>
               <AntDesign name="clockcircle" size={12} color="white" />
