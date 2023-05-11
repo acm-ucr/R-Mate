@@ -1,14 +1,24 @@
 import { View, Text, TouchableOpacity } from 'react-native';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AntDesign } from '@expo/vector-icons';
 
 const SRCHourButton = () => {
   const [showHours, setShowHours] = useState(false);
+  const [currentTime, setCurrentTime] = useState(new Date().getHours());
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTime(new Date().getHours());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  console.log(currentTime);
   // let style = '';
   // let text = '';
 
-  // switch (status) {
+  // switch () {
   //   case 'open':
   //     style = 'bg-green-500 text-white';
   //     text = 'Open';
