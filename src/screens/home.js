@@ -6,7 +6,7 @@ import Title from '../components/Title';
 
 const HomeScreen = ({ name }) => {
   return (
-    <View className="w-full flex flex-row">
+    <View className="w-full flex flex-col">
       <Welcome name="Ashley" />
       <Text>home</Text>
       <Title title="On Campus Resources"></Title>
