@@ -24,13 +24,14 @@ const SRCHourButton = () => {
   let text = '';
   let buttonStyle = '';
   let textStyle = '';
-
+  let arrowColor = '';
   if (currentDay > 0 && currentDay < 5) {
     if (currentTime.getHours() > 23 || currentTime.getTime() < openMT.getTime()) {
       text = 'Closed';
       buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-[#83c959] rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-[#83c959] font-poppins-500 my-1';
+        'flex flex-row items-center bg-rmate-white border-2 border-rmate-close rounded-full px-2 justify-between w-1/3';
+      textStyle = 'text-rmate-close font-poppins-500 my-1';
+      arrowColor = '#df7740';
     }
     if (currentTime.getTime() >= openMT.getTime()) {
       text = 'Open';
@@ -46,11 +47,11 @@ const SRCHourButton = () => {
       >
         <View className={buttonStyle}>
           <Text className={textStyle}>{text}</Text>
-          <View className="">
+          <View>
             {showHours ? (
-              <AntDesign name="caretdown" size={10} />
+              <AntDesign name="caretdown" size={10} color={arrowColor} />
             ) : (
-              <AntDesign name="caretup" size={10} />
+              <AntDesign name="caretup" size={10} color={arrowColor} />
             )}
           </View>
         </View>
