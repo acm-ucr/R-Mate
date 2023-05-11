@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 
 const SRCHourButton = ({ status }) => {
@@ -15,11 +15,16 @@ const SRCHourButton = ({ status }) => {
     case 'closed':
       style = 'bg-red-500 text-white';
       text = 'Closed';
+    default:
+      style = '';
+      text = '';
   }
 
   return (
     <View>
-      <Text>SRCHourButton</Text>
+      <TouchableOpacity>
+
+      </TouchableOpacity>
     </View>
   );
 };
