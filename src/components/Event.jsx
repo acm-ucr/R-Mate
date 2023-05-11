@@ -34,7 +34,11 @@ const Event = () => {
             <Text className="text-[#83c959] font-poppins-300 my-1">Closing Soon</Text>
           </View>
           <View className="">
-            <AntDesign name="caretdown" size={10} className="text-[#83c959]" />
+            {showHours ? (
+              <AntDesign name="caretdown" size={10} />
+            ) : (
+              <AntDesign name="caretup" size={10} />
+            )}
           </View>
         </View>
       </TouchableOpacity>
