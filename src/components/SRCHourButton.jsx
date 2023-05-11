@@ -45,13 +45,43 @@ const SRCHourButton = ({ status }) => {
       </TouchableOpacity>
 
       {showHours && (
-        <View className="bg-rmate-blue w-11/12 rounded-md p-6">
-          <View className="flex flex-row justify-between">
-            <Text className="text-rmate-white font-poppins-600">Daily Hours</Text>
-            <View className="flex flex-row bg-rmate-yellow rounded-full justify-between items-center">
-              <Text className="text-rmate-white font-poppins-300 my-0.5 px-2">All SRC Hours</Text>
+        <View className="bg-rmate-blue w-11/12 rounded-md p-3">
+          <View className="flex flex-row justify-between py-1">
+            <Text className="text-rmate-white font-poppins-600 text-lg">Daily Hours</Text>
+            <View className="flex flex-row bg-rmate-yellow rounded-full justify-between items-center px-2">
+              <Text className="text-rmate-white font-poppins-500 text-xs my-0.5">
+                All SRC Hours
+              </Text>
               <AntDesign name="clockcircle" size={12} color="white" />
             </View>
+          </View>
+          <View className="flex flex-row justify-between py-1">
+            <Text className="text-rmate-white font-poppins-600">Monday</Text>
+            <Text className="text-rmate-white font-poppins-600">6:30am - 11pm</Text>
+          </View>
+          <View className="flex flex-row justify-between py-1">
+            <Text className="text-rmate-white font-poppins-600">Tuesday</Text>
+            <Text className="text-rmate-white font-poppins-600">6:30am - 11pm</Text>
+          </View>
+          <View className="flex flex-row justify-between py-1">
+            <Text className="text-rmate-white font-poppins-600">Wednesday</Text>
+            <Text className="text-rmate-white font-poppins-600">6:30am - 11pm</Text>
+          </View>
+          <View className="flex flex-row justify-between py-1">
+            <Text className="text-rmate-white font-poppins-600">Thursday</Text>
+            <Text className="text-rmate-white font-poppins-600">6:30am - 11pm</Text>
+          </View>
+          <View className="flex flex-row justify-between py-1">
+            <Text className="text-rmate-white font-poppins-600">Friday</Text>
+            <Text className="text-rmate-white font-poppins-600">6:30am - 11pm</Text>
+          </View>
+          <View className="flex flex-row justify-between py-1">
+            <Text className="text-rmate-white font-poppins-600">Saturday</Text>
+            <Text className="text-rmate-white font-poppins-600">3pm - 7pm</Text>
+          </View>
+          <View className="flex flex-row justify-between py-1">
+            <Text className="text-rmate-white font-poppins-600">Sunday</Text>
+            <Text className="text-rmate-white font-poppins-600">3pm - 11pm</Text>
           </View>
         </View>
       )}
