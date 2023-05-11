@@ -30,9 +30,9 @@ const SRCHourButton = ({ status }) => {
           setShowHours(!showHours);
         }}
       >
-        <View className="flex flex-row items-center bg-rmate-white border-2 border-[#83c959] rounded-full px-3 justify-between">
+        <View className="flex flex-row items-center bg-rmate-white border-2 border-[#83c959] rounded-full px-2 justify-between w-1/3">
           <View>
-            <Text className="text-[#83c959] font-poppins-300 my-1">Closing Soon</Text>
+            <Text className="text-[#83c959] font-poppins-500 my-1">Closing Soon</Text>
           </View>
           <View className="">
             {showHours ? (
@@ -45,8 +45,14 @@ const SRCHourButton = ({ status }) => {
       </TouchableOpacity>
 
       {showHours && (
-        <View className="bg-rmate-blue w-full">
-          <Text>Hello</Text>
+        <View className="bg-rmate-blue w-11/12 rounded-md p-6">
+          <View className="flex flex-row justify-between">
+            <Text className="text-rmate-white font-poppins-600">Daily Hours</Text>
+            <View className="flex flex-row bg-rmate-yellow rounded-full justify-between items-center">
+              <Text className="text-rmate-white font-poppins-300 my-0.5 px-2">All SRC Hours</Text>
+              <AntDesign name="clockcircle" size={12} color="white" />
+            </View>
+          </View>
         </View>
       )}
     </View>
