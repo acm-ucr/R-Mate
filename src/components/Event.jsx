@@ -1,11 +1,9 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { AntDesign } from '@expo/vector-icons';
 
 const Event = () => {
   const navigation = useNavigation();
-  const [showHours, setShowHours] = useState(false);
   return (
     <View className="rounded-lg bg-rmate-lightblue p-2 w-5/6 my-1">
       <TouchableOpacity onPress={() => navigation.navigate('EventPage')}>
@@ -23,30 +21,6 @@ const Event = () => {
           </View>
         </View>
       </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => {
-          setShowHours(!showHours);
-        }}
-      >
-        <View className="flex flex-row items-center bg-rmate-white border-2 border-[#83c959] rounded-full px-3 justify-between">
-          <View>
-            <Text className="text-[#83c959] font-poppins-300 my-1">Closing Soon</Text>
-          </View>
-          <View className="">
-            {showHours ? (
-              <AntDesign name="caretdown" size={10} />
-            ) : (
-              <AntDesign name="caretup" size={10} />
-            )}
-          </View>
-        </View>
-      </TouchableOpacity>
-      {showHours && (
-        <View>
-          <Text>Hello</Text>
-        </View>
-      )}
     </View>
   );
 };
