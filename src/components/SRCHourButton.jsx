@@ -14,108 +14,99 @@ const SRCHourButton = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const currentDay = currentTime.getDay();
-  const openMT = new Date();
-  openMT.setHours(6);
-  openMT.setMinutes(30);
-  // const closeMT = new Date();
-  // openMT.setHours(5);
-  // openMT.setMinutes(0);
+  function schedule() {
+    const currentDay = currentTime.getDay();
+    const openMF = new Date();
+    openMF.setHours(6, 30, 0);
+
+    if (currentDay > 0 && currentDay < 5) {
+      if (currentTime.getHours() >= 23 || currentTime.getTime() < openMF.getTime()) {
+        return 'close';
+      }
+      if (23 - currentTime.getHours() === 1) {
+        return 'soon';
+      }
+      if (currentTime.getTime() >= openMF.getTime()) {
+        return 'open';
+      }
+    }
+
+    if (currentDay === 5) {
+      if (currentTime.getHours() >= 19 || currentTime.getTime() < openMF.getTime()) {
+        return 'close';
+      }
+      if (19 - currentTime.getHours() === 1) {
+        return 'soon';
+      }
+      if (currentTime.getTime() >= openMF.getTime()) {
+        return 'open';
+      }
+    }
+
+    if (currentDay === 6) {
+      if (currentTime.getHours() >= 19 || currentTime.getTime() < openMF.getTime()) {
+        return 'close';
+      }
+      if (19 - currentTime.getHours() === 1) {
+        return 'soon';
+      }
+      if (currentTime.getHours() >= 15) {
+        return 'open';
+      }
+    }
+
+    if (currentDay === 0) {
+      if (currentTime.getHours() >= 23 || currentTime.getTime() < openMF.getTime()) {
+        return 'close';
+      }
+      if (23 - currentTime.getHours() === 1) {
+        return 'soon';
+      }
+      if (currentTime.getHours() >= 15) {
+        return 'open';
+      }
+    }
+  }
+
+  function timeStyle(status) {
+    if (status === 'open') {
+      text = 'Open';
+      buttonColor = 'border-rmate-open';
+      textColor = 'text-rmate-open';
+      arrowColor = '#43b300';
+    }
+    if (status === 'soon') {
+      text = 'Closing Soon';
+      buttonColor = 'border-rmate-soon';
+      textColor = 'text-rmate-soon';
+      arrowColor = '#feb81d';
+    }
+    if (status === 'close') {
+      text = 'Close';
+      buttonColor = 'border-rmate-close';
+      textColor = 'text-rmate-close';
+      arrowColor = '#df7740';
+    }
+  }
+
   let text = '';
-  let buttonStyle = '';
-  let textStyle = '';
+  let buttonColor = '';
+  let textColor = '';
   let arrowColor = '';
-  if (currentDay > 0 && currentDay < 5) {
-    if (currentTime.getHours() > 23 || currentTime.getTime() < openMT.getTime()) {
-      text = 'Closed';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-close rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-close font-poppins-500 my-1';
-      arrowColor = '#df7740';
-    }
-    if (currentTime.getTime() >= openMT.getTime()) {
-      text = 'Open';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-open rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-open font-poppins-500 my-1';
-      arrowColor = '#43b300';
-    }
-  }
 
-  if (currentDay === 5) {
-    if (currentTime.getHours() > 19 || currentTime.getTime() < openMT.getTime()) {
-      text = 'Closed';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-close rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-close font-poppins-500 my-1';
-      arrowColor = '#df7740';
-    }
-    if (currentTime.getTime() >= openMT.getTime()) {
-      text = 'Open';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-open rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-open font-poppins-500 my-1';
-      arrowColor = '#43b300';
-    }
-  }
-
-  if (currentDay === 6) {
-    if (currentTime.getHours() > 19 || currentTime.getHours() < 15) {
-      text = 'Closed';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-close rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-close font-poppins-500 my-1';
-      arrowColor = '#df7740';
-    }
-    if (19 - currentTime.getHours() === 1) {
-      text = 'Closing Soon';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-soon rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-soon font-poppins-500 my-1';
-      arrowColor = '#feb81d';
-    }
-    if (currentTime.getHours() >= 15) {
-      text = 'Open';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-open rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-open font-poppins-500 my-1';
-      arrowColor = '#43b300';
-    }
-  }
-
-  if (currentDay === 0) {
-    if (currentTime.getHours() > 23 || currentTime.getHours() < 15) {
-      text = 'Closed';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-close rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-close font-poppins-500 my-1';
-      arrowColor = '#df7740';
-    }
-    if (23 - currentTime.getHours() === 1) {
-      text = 'Closing Soon';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-soon rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-soon font-poppins-500 my-1';
-      arrowColor = '#feb81d';
-    }
-    if (currentTime.getHours() >= 15) {
-      text = 'Open';
-      buttonStyle =
-        'flex flex-row items-center bg-rmate-white border-2 border-rmate-open rounded-full px-2 justify-between w-1/3';
-      textStyle = 'text-rmate-open font-poppins-500 my-1';
-      arrowColor = '#43b300';
-    }
-  }
+  timeStyle(schedule());
 
   return (
-    <View className="rounded-lg">
+    <View>
       <TouchableOpacity
         onPress={() => {
           setShowHours(!showHours);
         }}
       >
-        <View className={buttonStyle}>
-          <Text className={textStyle}>{text}</Text>
+        <View
+          className={`flex flex-row items-center bg-rmate-white border-2 ${buttonColor} rounded-full px-2 justify-between w-1/3`}
+        >
+          <Text className={`font-poppins-500 my-1 ${textColor}`}>{text}</Text>
           <View>
             {showHours ? (
               <AntDesign name="caretdown" size={10} color={arrowColor} />
