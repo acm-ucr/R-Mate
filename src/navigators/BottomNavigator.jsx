@@ -32,7 +32,7 @@ const BottomNavigator = () => {
   };
   return (
     <Tab.Navigator tabBar={(props) => <BottomBar {...props} />}>
-      <Tab.Screen name="home" component={home} options={screenOptions} />
+      <Tab.Screen name="homeScreen" component={home} options={screenOptions} />
       <Tab.Screen name="events" component={events} options={screenOptions} />
       <Tab.Screen name="map" component={map} options={screenOptions} />
       <Tab.Screen name="survey" component={surveys} options={screenOptions} />
