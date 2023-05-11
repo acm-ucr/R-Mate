@@ -51,9 +51,9 @@ const HomeScreen = ({ name }) => {
     <View className="w-full flex flex-col bg-rmate-lightblue h-full">
       <Welcome name="Hailey" />
       <SafeAreaView className="flex items-center justify-center">
-        <View className="w-full p-2">
+        <View className="w-screen pt-3 flex items-center row-center">
           <FlatList
-            className="w-full flex p-2"
+            className="w-fit flex pr-4"
             data={resources}
             ItemSeparatorComponent={() => <View style={{ height: 5 }} />}
             numColumns={4}
