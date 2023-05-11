@@ -9,7 +9,7 @@ const SRCHourButton = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTime(new Date());
-    }, 1000);
+    }, 1800000);
 
     return () => clearInterval(interval);
   }, []);
