@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 import { View, Text, TouchableOpacity } from 'react-native';
 import UCRNavbarLogo from '../../assets/UCRNavbarLogo.svg';
 
-const BottomNavigator = () => {
+const Navigator = () => {
   const navigation = useNavigation();
   const Tab = createBottomTabNavigator();
   const screenOptions = {
@@ -40,4 +40,4 @@ const BottomNavigator = () => {
   );
 };
 
-export default BottomNavigator;
+export default Navigator;

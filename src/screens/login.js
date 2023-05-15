@@ -40,7 +40,7 @@ const LoginScreen = () => {
           <View className="flex justify-center items-center flex-row w-full">
             <TouchableOpacity
               className="bg-rmate-yellow rounded-full w-9/12 h-16 justify-center items-center "
-              onPress={() => navigation.navigate('BottomNavigator')}
+              onPress={() => navigation.navigate('Navigator')}
             >
               <Text className="text-rmate-blue text-2xl font-poppins-600 ml-2">Sign In</Text>
             </TouchableOpacity>

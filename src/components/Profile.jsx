@@ -48,7 +48,7 @@ const Profile = () => {
   return (
     <SafeAreaView className="w-full flex justify-center items-center bg-rmate-blue">
       <View className="w-full h-[35vh] p-3">
-        <TouchableOpacity onPress={() => navigation.navigate('BottomNavigator')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Navigator')}>
           <Feather name="x" size={24} color="white" />
         </TouchableOpacity>
         <View className="flex items-center justify-center h-5/6">
