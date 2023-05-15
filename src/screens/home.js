@@ -1,24 +1,21 @@
+import { View, Text } from 'react-native';
 import React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from '../components/Home';
-import SRC from '../components/SRC';
-import Health from '../components/Health';
-import Directory from '../components/Directory';
-import Library from '../components/Library';
+import Welcome from '../components/Welcome';
+import ResourcesCard from '../components/ResourcesCard';
+import Title from '../components/Title';
+import SRCProgramCard from '../components/SRCProgramCard';
 
-const screenOptions = {
-  headerShown: false,
-};
-const HomeStack = createNativeStackNavigator();
-const HomeScreen = () => {
+const HomeScreen = ({ name }) => {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name="home" component={Home} options={screenOptions} />
-      <HomeStack.Screen name="src" component={SRC} options={screenOptions} />
-      <HomeStack.Screen name="health" component={Health} options={screenOptions} />
-      <HomeStack.Screen name="library" component={Library} options={screenOptions} />
-      <HomeStack.Screen name="directory" component={Directory} options={screenOptions} />
-    </HomeStack.Navigator>
+    <View className="w-full flex flex-col">
+      <Welcome name="Ashley" />
+      <Text>home</Text>
+      <Title title="On Campus Resources"></Title>
+      <SRCProgramCard />
+      <ResourcesCard text="Health" icon={require('../../assets/Health.svg')} />
+      <ResourcesCard text="SRC" icon={require('../../assets/SRC.svg')} />
+      <Title title="Upcoming Events"></Title>
+    </View>
   );
 };
 
