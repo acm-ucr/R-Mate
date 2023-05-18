@@ -3,6 +3,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import Hours from './SRCHourButton';
+import SRCButton from './SRCButton';
 const SRC = () => {
   const navigator = useNavigation();
   return (
@@ -17,6 +18,7 @@ const SRC = () => {
       </TouchableOpacity>
       <Text>SRC</Text>
       <Hours />
+      <SRCButton></SRCButton>
     </View>
   );
 };
