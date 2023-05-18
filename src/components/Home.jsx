@@ -6,7 +6,6 @@ import ResourcesCard from '../components/ResourcesCard';
 import HealthSVG from '../../assets/Health.svg';
 import srcSVG from '../../assets/SRC.svg';
 import LibrarySVG from '../../assets/Library.svg';
-import SRCButton from './SRCButton';
 
 const resources = [
   {
@@ -74,7 +73,6 @@ const Home = () => {
           />
         </View>
       </SafeAreaView>
-      <SRCButton />
     </View>
   );
 };

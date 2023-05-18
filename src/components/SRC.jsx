@@ -18,7 +18,7 @@ const SRC = () => {
       </TouchableOpacity>
       <Text>SRC</Text>
       <Hours />
-      <SRCButton></SRCButton>
+      <SRCButton />
     </View>
   );
 };
