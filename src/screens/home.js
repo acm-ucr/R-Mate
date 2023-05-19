@@ -6,13 +6,14 @@ import Title from '../components/Title';
 
 const HomeScreen = ({ name }) => {
   return (
-    <View className="w-full flex flex-row">
+    <View className="w-full flex flex-column">
       <Welcome name="Ashley" />
       <Text>home</Text>
       <Title title="On Campus Resources"></Title>
       <ResourcesCard text="Health" icon={require('../../assets/Health.svg')} />
       <ResourcesCard text="SRC" icon={require('../../assets/SRC.svg')} />
       <Title title="Upcoming Events"></Title>
+        
     </View>
   );
 };
