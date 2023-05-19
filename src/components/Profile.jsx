@@ -2,10 +2,8 @@ import { View, Text, SafeAreaView } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons, MaterialCommunityIcons, Entypo, Feather } from '@expo/vector-icons';
-import React, { /* useState, */ useContext } from 'react';
+import React, { useContext } from 'react';
 import RMateContext from './RMateContext';
-// import { db } from '../../firebase';
-// import { doc, getDoc } from 'firebase/firestore';
 import ProfileSVG from '../../assets/profilePIC.svg';
 
 const general = [
@@ -47,21 +45,10 @@ const Profile = () => {
     console.log('oops');
   }
 
-  // const [name] = useState('Name from useState');
-
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const docSnap = await getDoc(doc(db, 'test', 'test_id'));
-  //     console.log(docSnap.data());
-  //     setName(docSnap.data().name);
-  //   };
-  //   getData();
-  // }, []);
-
   return (
     <SafeAreaView className="w-full flex justify-center items-center bg-rmate-blue">
       <View className="w-full h-[35vh] p-3">
-        <TouchableOpacity onPress={() => navigation.navigate('BottomNavigator')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Navigator')}>
           <Feather name="x" size={24} color="white" />
         </TouchableOpacity>
         <View className="flex items-center justify-center h-5/6">

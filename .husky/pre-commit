@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 . "$(dirname "$0")/_/husky.sh"
 
 echo "👾 Let's check your styling, testing and building your project before committing"

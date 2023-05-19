@@ -6,10 +6,11 @@ import map from '../screens/map';
 import surveys from '../screens/surveys';
 import BottomBar from '../components/BottomBar';
 import { useNavigation } from '@react-navigation/native';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import UCRNavbarLogo from '../../assets/UCRNavbarLogo.svg';
+import ProfileSVG from '../../assets/profilePIC.svg';
 
-const BottomNavigator = () => {
+const Navigator = () => {
   const navigation = useNavigation();
   const Tab = createBottomTabNavigator();
   const screenOptions = {
@@ -26,13 +27,13 @@ const BottomNavigator = () => {
         title="Info"
         color="#fff"
       >
-        <Text>Profile</Text>
+        <ProfileSVG width={84} height={38} />
       </TouchableOpacity>
     ),
   };
   return (
     <Tab.Navigator tabBar={(props) => <BottomBar {...props} />}>
-      <Tab.Screen name="home" component={home} options={screenOptions} />
+      <Tab.Screen name="homeScreen" component={home} options={screenOptions} />
       <Tab.Screen name="events" component={events} options={screenOptions} />
       <Tab.Screen name="map" component={map} options={screenOptions} />
       <Tab.Screen name="survey" component={surveys} options={screenOptions} />
@@ -40,4 +41,4 @@ const BottomNavigator = () => {
   );
 };
 
-export default BottomNavigator;
+export default Navigator;

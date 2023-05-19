@@ -3,7 +3,7 @@ import React from 'react';
 
 const Welcome = ({ name }) => {
   return (
-    <View className="w-full flex flex-col">
+    <View className="w-full">
       <Text className="bg-rmate-light gray text-rmate-blue text-2xl pt-4  pl-4 pr-4 font-poppins-500">
         Welcome,
       </Text>
