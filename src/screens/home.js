@@ -13,7 +13,6 @@ const HomeScreen = ({ name }) => {
       <ResourcesCard text="Health" icon={require('../../assets/Health.svg')} />
       <ResourcesCard text="SRC" icon={require('../../assets/SRC.svg')} />
       <Title title="Upcoming Events"></Title>
-        
     </View>
   );
 };
