@@ -1,7 +1,7 @@
-import { View, Text } from 'react-native';
-import React from 'react';
-import { useNavigation } from '@react-navigation/core';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { View, Text } from "react-native";
+import React from "react";
+import { useNavigation } from "@react-navigation/core";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const ResourcesCard = (props) => {
   const navigation = useNavigation();

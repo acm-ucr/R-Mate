@@ -1,8 +1,8 @@
-import { View, Text } from 'react-native';
-import React from 'react';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { useNavigation } from '@react-navigation/native';
-import Hours from './SRCHourButton';
+import { View, Text } from "react-native";
+import React from "react";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
+import Hours from "./SRCHourButton";
 const SRC = () => {
   const navigator = useNavigation();
   return (

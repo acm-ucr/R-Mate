@@ -8,15 +8,15 @@ import {
   Pressable,
   TouchableWithoutFeedback,
   Keyboard,
-} from 'react-native';
-import { Feather } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
-import React from 'react';
-import BugSVG from '../../assets/bug.svg';
-import { useState } from 'react';
+} from "react-native";
+import { Feather } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import React from "react";
+import BugSVG from "../../assets/bug.svg";
+import { useState } from "react";
 
 const Bug = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const navigation = useNavigation();
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -24,7 +24,7 @@ const Bug = () => {
         <SafeAreaView className="bg-rmate-lightblue w-full h-full">
           <View className="p-3 w-full">
             <TouchableOpacity
-              onPress={() => navigation.navigate('Profile')}
+              onPress={() => navigation.navigate("Profile")}
               className="flex flex-row items-center"
             >
               <Feather name="arrow-left" size={24} color="black" />

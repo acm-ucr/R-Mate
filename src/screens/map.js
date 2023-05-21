@@ -1,7 +1,7 @@
-import { View } from 'react-native';
-import React, { useEffect, createRef, useState } from 'react';
-import MapView from 'react-native-maps';
-import * as Location from 'expo-location';
+import { View } from "react-native";
+import React, { useEffect, createRef, useState } from "react";
+import MapView from "react-native-maps";
+import * as Location from "expo-location";
 
 const MapScreen = () => {
   const mapRef = createRef();
@@ -10,7 +10,7 @@ const MapScreen = () => {
   useEffect(() => {
     (async () => {
       const { status } = await Location.requestForegroundPermissionsAsync();
-      if (status === 'granted') {
+      if (status === "granted") {
         const location = await Location.getCurrentPositionAsync({
           accuracy: Location.Accuracy.Balanced,
           enableHighAccuracy: true,
@@ -40,7 +40,7 @@ const MapScreen = () => {
         latitudeDelta: 0.01,
         longitudeDelta: 0.01,
       },
-      2,
+      2
     );
   };
 

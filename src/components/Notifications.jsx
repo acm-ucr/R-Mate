@@ -1,28 +1,28 @@
-import { View, Text, TouchableOpacity, SafeAreaView } from 'react-native';
-import React from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { Feather } from '@expo/vector-icons';
-import BellSVG from '../../assets/bell.svg';
+import { View, Text, TouchableOpacity, SafeAreaView } from "react-native";
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { Feather } from "@expo/vector-icons";
+import BellSVG from "../../assets/bell.svg";
 
 const notifications = [
   {
-    title: 'required milestone',
+    title: "required milestone",
     required: false,
   },
   {
-    title: 'required milestone',
+    title: "required milestone",
     required: true,
   },
   {
-    title: 'required milestone',
+    title: "required milestone",
     required: false,
   },
   {
-    title: 'required milestone',
+    title: "required milestone",
     required: true,
   },
   {
-    title: 'required milestone',
+    title: "required milestone",
     required: false,
   },
 ];
@@ -34,7 +34,7 @@ const Notifications = () => {
       <View className="p-3">
         <TouchableOpacity
           className="flex flex-row items-center"
-          onPress={() => navigation.navigate('Profile')}
+          onPress={() => navigation.navigate("Profile")}
         >
           <Feather name="arrow-left" size={24} color="black" />
           <BellSVG width={30} height={30} />

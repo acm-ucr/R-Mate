@@ -1,7 +1,7 @@
-import { View, Text, TouchableOpacity } from 'react-native';
-import React from 'react';
-import PhoneSVG from '../../assets/phone.svg';
-import MapSVG from '../../assets/map-filled.svg';
+import { View, Text, TouchableOpacity } from "react-native";
+import React from "react";
+import PhoneSVG from "../../assets/phone.svg";
+import MapSVG from "../../assets/map-filled.svg";
 
 const PhoneBookCard = ({ departmentName, phoneNum }) => {
   return (

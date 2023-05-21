@@ -1,9 +1,9 @@
-import { View, TouchableOpacity } from 'react-native';
-import React from 'react';
-import HomeLine from '../../assets/home-line.svg';
-import CalendarFilled from '../../assets/calendar-filled.svg';
-import MapLine from '../../assets/map-line.svg';
-import FormLine from '../../assets/form-line.svg';
+import { View, TouchableOpacity } from "react-native";
+import React from "react";
+import HomeLine from "../../assets/home-line.svg";
+import CalendarFilled from "../../assets/calendar-filled.svg";
+import MapLine from "../../assets/map-line.svg";
+import FormLine from "../../assets/form-line.svg";
 
 const BottomBar = ({ state, navigation }) => {
   const homeScreen = state.routes[0];
