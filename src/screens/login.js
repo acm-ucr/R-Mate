@@ -4,9 +4,43 @@ import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native";
 import BellTower from "../../assets/bellTower.svg";
 import UCLogo from "../../assets/UCLogo.svg";
+import * as WebBrowser from "expo-web-browser";
+import * as Google from "expo-auth-session/providers/google";
+import { useState, useEffect, useContext } from "react";
+import RMateContext from "../components/RMateContext";
 
+WebBrowser.maybeCompleteAuthSession();
 const LoginScreen = () => {
+  const [token, setToken] = useState("");
+  const { user, setUser } = useContext(RMateContext);
+  useEffect(() => {
+    if (response?.type === "success") {
+      setToken(response.authentication.accessToken);
+      getUserInfo();
+      console.log("HI");
+    }
+  }, [response, token]);
+  const getUserInfo = async () => {
+    try {
+      const result = await fetch("https://www.googleapis.com/userinfo/v2/me", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const userInfo = await result.json();
+      setUser(userInfo);
+      console.log(user);
+      navigation.navigate("Navigator");
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+
   const navigation = useNavigation();
+  // eslint-disable-next-line no-unused-vars
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    androidClientId: process.env.ANDROID_AUTH_CLIENT_ID,
+    iosClientId: process.env.IOS_AUTH_CLIENT_ID,
+    expoClientId: process.env.WEB_AUTH_CLIENT_ID,
+  });
   return (
     <View className="w-full h-full">
       <SafeAreaView className="h-full w-full bg-rmate-blue flex flex-col justify-center items-center z-0">
@@ -50,7 +84,9 @@ const LoginScreen = () => {
           <View className="flex justify-center items-center flex-row w-full">
             <TouchableOpacity
               className="bg-rmate-yellow rounded-full w-9/12 h-16 justify-center items-center "
-              onPress={() => navigation.navigate("Navigator")}
+              onPress={() => {
+                promptAsync();
+              }}
             >
               <Text className="text-rmate-blue text-2xl font-poppins-600 ml-2">
                 Sign In
