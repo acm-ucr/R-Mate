@@ -111,26 +111,29 @@ const SRCHourButton = () => {
   return (
     <View>
       <TouchableOpacity
+        className="flex flex-row"
         onPress={() => {
           setShowHours(!showHours);
         }}
       >
         <View
-          className={`flex flex-row items-center bg-rmate-white border-2 ${buttonColor} rounded-full px-2 justify-between w-1/3`}
+          className={`flex flex-row items-center bg-rmate-white border-2 ${buttonColor} rounded-full px-2 py-0 justify-between w-fit`}
         >
-          <Text className={`font-poppins-500 my-1 ${textColor}`}>{text}</Text>
+          <Text className={`font-poppins-500 text-xl ${textColor} mx-2`}>
+            {text}
+          </Text>
           <View>
             {showHours ? (
-              <AntDesign name="caretdown" size={10} color={arrowColor} />
+              <AntDesign name="caretdown" size={15} color={arrowColor} />
             ) : (
-              <AntDesign name="caretup" size={10} color={arrowColor} />
+              <AntDesign name="caretup" size={15} color={arrowColor} />
             )}
           </View>
         </View>
       </TouchableOpacity>
 
       {showHours && (
-        <View className="bg-rmate-blue w-11/12 rounded-md p-3">
+        <View className="bg-rmate-blue w-full rounded-xl mt-2 p-3">
           <View className="flex flex-row justify-between py-1">
             <Text className="text-rmate-white font-poppins-700 text-xl">
               Daily Hours

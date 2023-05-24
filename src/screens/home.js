@@ -10,6 +10,10 @@ import Market from "../components/Market";
 import ARC from "../components/ARC";
 import Dining from "../components/Dining";
 import Parking from "../components/Parking";
+import SRCSchedule from "../components/SRCSchedule";
+import SRCPrograms from "../components/SRCPrograms";
+import SRCFacilityCounts from "../components/SRCFacilityCounts";
+import SRCReservation from "../components/SRCReservation";
 
 const screenOptions = {
   headerShown: false,
@@ -54,6 +58,26 @@ const HomeScreen = () => {
       <HomeStack.Screen
         name="parking"
         component={Parking}
+        options={screenOptions}
+      />
+      <HomeStack.Screen
+        name="srcSchedule"
+        component={SRCSchedule}
+        options={screenOptions}
+      />
+      <HomeStack.Screen
+        name="srcPrograms"
+        component={SRCPrograms}
+        options={screenOptions}
+      />
+      <HomeStack.Screen
+        name="srcFacilityCounts"
+        component={SRCFacilityCounts}
+        options={screenOptions}
+      />
+      <HomeStack.Screen
+        name="srcReservation"
+        component={SRCReservation}
         options={screenOptions}
       />
     </HomeStack.Navigator>
