@@ -32,7 +32,7 @@ export default function app() {
 
   useEffect(() => {
     setUser({
-      name: "AAAAAAA",
+      name: "User Name",
       email: "EAWTJGIEWA@ucr.edu",
     });
   }, []);

@@ -1,68 +1,70 @@
 import { View, FlatList, SafeAreaView } from "react-native";
 import React from "react";
 import Welcome from "../components/Welcome";
-import DirectorySVG from "../../assets/phone.svg";
 import ResourcesCard from "../components/ResourcesCard";
-import HealthSVG from "../../assets/Health.svg";
 import srcSVG from "../../assets/SRC.svg";
-import LibrarySVG from "../../assets/Library.svg";
+import careerSVG from "../../assets/career.svg";
+import librarySVG from "../../assets/library.svg";
+import diningSVG from "../../assets/dining.svg";
+import directorySVG from "../../assets/directory.svg";
+import marketSVG from "../../assets/market.svg";
+import parkingSVG from "../../assets/parking.svg";
+import arcSVG from "../../assets/ARC.svg";
+import Title from "./Title";
 
 const resources = [
-  {
-    text: "Health",
-    icon: HealthSVG,
-    navigate: "health",
-  },
   {
     text: "SRC",
     icon: srcSVG,
     navigate: "src",
   },
   {
+    text: "ARC",
+    icon: arcSVG,
+    navigate: "arc",
+  },
+  {
     text: "Library",
-    icon: LibrarySVG,
+    icon: librarySVG,
     navigate: "library",
   },
   {
     text: "Directory",
-    icon: DirectorySVG,
+    icon: directorySVG,
     navigate: "directory",
   },
-  //   {
-  //     text: 'Add...',
-  //     icon: HealthSVG,
-  //     navigate: '',
-  //   },
-  //   {
-  //     text: 'Add...',
-  //     icon: HealthSVG,
-  //     navigate: '',
-  //   },
-  //   {
-  //     text: 'Add...',
-  //     icon: HealthSVG,
-  //     navigate: '',
-  //   },
-  //   {
-  //     text: 'Add...',
-  //     icon: HealthSVG,
-  //     navigate: '',
-  //   },
-  //   {
-  //     text: 'Add...',
-  //     icon: HealthSVG,
-  //     navigate: '',
-  //   },
+  {
+    text: "Parking",
+    icon: parkingSVG,
+    navigate: "parking",
+  },
+  {
+    text: "Markets",
+    icon: marketSVG,
+    navigate: "market",
+  },
+  {
+    text: "Dining",
+    icon: diningSVG,
+    navigate: "dining",
+  },
+  {
+    text: "Career",
+    icon: careerSVG,
+    navigate: "career",
+  },
 ];
 
 const Home = () => {
   return (
-    <View className="w-full flex flex-col bg-rmate-lightblue h-full">
+    <View className="w-full flex flex-col bg-rmate-white h-full">
       <Welcome name="Hailey" />
-      <SafeAreaView className="flex items-center justify-center">
-        <View className="w-screen pt-3 flex items-center row-center">
+      <Title title="Upcoming Events" />
+      <Title title="On Campus Resources" />
+      <SafeAreaView className="flex items-center justify-center w-screen ">
+        <View className="pt-3 flex items-center row-center bg-rmate-lightblue w-11/12 rounded-xl">
           <FlatList
-            className="w-fit flex pr-4"
+            className="w-fit flex"
             data={resources}
             ItemSeparatorComponent={() => <View style={{ height: 5 }} />}
             numColumns={4}
