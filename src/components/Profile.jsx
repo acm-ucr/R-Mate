@@ -1,38 +1,45 @@
-import { View, Text, SafeAreaView } from 'react-native';
-import { TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { MaterialIcons, MaterialCommunityIcons, Entypo, Feather } from '@expo/vector-icons';
-import React, { useContext } from 'react';
-import RMateContext from './RMateContext';
-import ProfileSVG from '../../assets/profilePIC.svg';
+import { View, Text, SafeAreaView } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import {
+  MaterialIcons,
+  MaterialCommunityIcons,
+  Entypo,
+  Feather,
+} from "@expo/vector-icons";
+import React, { useContext } from "react";
+import RMateContext from "./RMateContext";
+import ProfileSVG from "../../assets/profilePIC.svg";
 
 const general = [
   {
-    navigation: 'Account',
-    text: 'Account',
+    navigation: "Account",
+    text: "Account",
     icon: <MaterialIcons name="person-outline" size={24} color="black" />,
   },
   {
-    navigation: 'Notification',
-    text: 'Notification',
-    icon: <MaterialCommunityIcons name="bell-outline" size={24} color="black" />,
+    navigation: "Notification",
+    text: "Notification",
+    icon: (
+      <MaterialCommunityIcons name="bell-outline" size={24} color="black" />
+    ),
   },
   {
-    navigation: 'LogoutScreen',
-    text: 'Click to Logout',
+    navigation: "LogoutScreen",
+    text: "Click to Logout",
     icon: <MaterialIcons name="logout" size={24} color="black" />,
   },
 ];
 
 const feedback = [
   {
-    navigation: 'Bug',
-    text: 'Bug',
+    navigation: "Bug",
+    text: "Bug",
     icon: <Entypo name="bug" size={24} color="black" />,
   },
   {
-    navigation: 'Feedback',
-    text: 'Feedback',
+    navigation: "Feedback",
+    text: "Feedback",
     icon: <Entypo name="paper-plane" size={24} color="black" />,
   },
 ];
@@ -42,20 +49,20 @@ const Profile = () => {
   const { user } = useContext(RMateContext);
 
   if (!user) {
-    console.log('oops');
+    console.log("oops");
   }
 
   return (
     <SafeAreaView className="w-full flex justify-center items-center bg-rmate-blue">
       <View className="w-full h-[35vh] p-3">
-        <TouchableOpacity onPress={() => navigation.navigate('Navigator')}>
+        <TouchableOpacity onPress={() => navigation.navigate("Navigator")}>
           <Feather name="x" size={24} color="white" />
         </TouchableOpacity>
         <View className="flex items-center justify-center h-5/6">
           <ProfileSVG width={100} height={100} />
           <Text
             className="text-rmate-white text-3xl font-semibold my-4"
-            style={{ fontFamily: 'Poppins_400Regular' }}
+            style={{ fontFamily: "Poppins_400Regular" }}
           >
             {user.name}
           </Text>
@@ -77,11 +84,18 @@ const Profile = () => {
               <View className="flex flex-row items-center justify-between">
                 <View className="flex flex-row items-center">
                   {item.icon}
-                  <Text className="mx-2" style={{ fontFamily: 'Poppins_400Regular' }}>
+                  <Text
+                    className="mx-2"
+                    style={{ fontFamily: "Poppins_400Regular" }}
+                  >
                     {item.text}
                   </Text>
                 </View>
-                <MaterialIcons name="keyboard-arrow-right" size={24} color="black" />
+                <MaterialIcons
+                  name="keyboard-arrow-right"
+                  size={24}
+                  color="black"
+                />
               </View>
             </TouchableOpacity>
           ))}
@@ -100,11 +114,18 @@ const Profile = () => {
               <View className="flex flex-row items-center justify-between">
                 <View className="flex flex-row items-center">
                   {item.icon}
-                  <Text className="mx-2" style={{ fontFamily: 'Poppins_400Regular' }}>
+                  <Text
+                    className="mx-2"
+                    style={{ fontFamily: "Poppins_400Regular" }}
+                  >
                     {item.text}
                   </Text>
                 </View>
-                <MaterialIcons name="keyboard-arrow-right" size={24} color="black" />
+                <MaterialIcons
+                  name="keyboard-arrow-right"
+                  size={24}
+                  color="black"
+                />
               </View>
             </TouchableOpacity>
           ))}

@@ -1,13 +1,14 @@
-import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import home from '../screens/home';
-import events from '../screens/events';
-import map from '../screens/map';
-import surveys from '../screens/surveys';
-import BottomBar from '../components/BottomBar';
-import { useNavigation } from '@react-navigation/native';
-import { View, Text, TouchableOpacity } from 'react-native';
-import UCRNavbarLogo from '../../assets/UCRNavbarLogo.svg';
+import React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import home from "../screens/home";
+import events from "../screens/events";
+import map from "../screens/map";
+import surveys from "../screens/surveys";
+import BottomBar from "../components/BottomBar";
+import { useNavigation } from "@react-navigation/native";
+import { View, TouchableOpacity } from "react-native";
+import UCRNavbarLogo from "../../assets/UCRNavbarLogo.svg";
+import ProfileSVG from "../../assets/profilePIC.svg";
 
 const Navigator = () => {
   const navigation = useNavigation();
@@ -22,11 +23,11 @@ const Navigator = () => {
     ),
     headerRight: () => (
       <TouchableOpacity
-        onPress={() => navigation.navigate('ProfileInformation')}
+        onPress={() => navigation.navigate("ProfileInformation")}
         title="Info"
         color="#fff"
       >
-        <Text>Profile</Text>
+        <ProfileSVG width={84} height={38} />
       </TouchableOpacity>
     ),
   };

@@ -1,15 +1,17 @@
-import { View, Text, Pressable } from 'react-native';
-import React from 'react';
+import { View, Text, Pressable } from "react-native";
+import React from "react";
 
 const SRCProgramCard = (props) => {
   const handleSubmit = (event) => {
-    console.log('Details');
+    console.log("Details");
   };
   return (
     <View className="flex flex-col p-3 rounded-3xl justify-around bg-white object-fill h-[20vh] w-[95vw]">
       <View className="flex flex-row justify-between items-center">
         <View>
-          <Text className="font-poppins-600 text-lg text-rmate-blue">{props.title}</Text>
+          <Text className="font-poppins-600 text-lg text-rmate-blue">
+            {props.title}
+          </Text>
         </View>
         <View>
           <Text className="font-poppins-300 text-sm text-rmate-midblue">
