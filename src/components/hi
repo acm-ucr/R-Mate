@@ -1,0 +1,58 @@
+[
+  {
+    "location_name": "Big Springs 1",
+    "location_address": "400 Big Springs Road",
+    "date_time": "2023-05-24 11:02:42 -8:00",
+    "total_spaces": 533,
+    "free_spaces": 241
+  },
+  {
+    "location_name": "Big Springs 2",
+    "location_address": "405 Big Springs Road",
+    "date_time": "2023-05-24T18:03:04.076Z",
+    "total_spaces": 1079,
+    "free_spaces": 519
+  },
+  {
+    "location_name": "Lot 6",
+    "location_address": "Lot 6",
+    "date_time": "2023-05-24 11:02:32 -8:00",
+    "total_spaces": 391,
+    "free_spaces": 70
+  },
+  {
+    "location_name": "Lot 24",
+    "location_address": "Canyon Crest Drive",
+    "date_time": "2023-05-24 11:02:47 -8:00",
+    "total_spaces": 406,
+    "free_spaces": 100
+  },
+  {
+    "location_name": "Lot 26",
+    "location_address": "Rustin Avenue",
+    "date_time": "2023-05-24 10:57:31 -8:00",
+    "total_spaces": 436,
+    "free_spaces": 261
+  },
+  {
+    "location_name": "Lot 30",
+    "location_address": "Lot 30",
+    "date_time": "2023-05-24 11:02:46 -8:00",
+    "total_spaces": 2190,
+    "free_spaces": 912
+  },
+  {
+    "location_name": "Lot 32",
+    "location_address": "Lot 32",
+    "date_time": "2023-05-24 11:02:58 -8:00",
+    "total_spaces": 258,
+    "free_spaces": 48
+  },
+  {
+    "location_name": "Lot 50",
+    "location_address": "Everton Place",
+    "date_time": "2023-05-24 11:02:05 -7:00",
+    "total_spaces": 498,
+    "free_spaces": 343
+  }
+]
