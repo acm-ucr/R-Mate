@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import { NavigationContainer } from "@react-navigation/native";
 import RootNavigator from "./src/navigators/RootNavigator";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RMateContext from "./src/components/RMateContext";
 // import './src/styles.css';
 
@@ -29,6 +29,13 @@ import {
 
 export default function app() {
   const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    setUser({
+      name: "User Name",
+      email: "EAWTJGIEWA@ucr.edu",
+    });
+  }, []);
 
   const [fontsLoaded] = useFonts({
     Poppins_100Thin,
