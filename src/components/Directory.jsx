@@ -1,20 +1,25 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/core";
+import DirectoryData from "./data/DirectoryData";
+import BackButton from "./BackButton";
+import DirectoryCard from "./DirectoryCard";
+import { ScrollView } from "react-native";
 
 const Directory = () => {
   const navigator = useNavigation();
   return (
-    <View>
-      <TouchableOpacity
-        className="flex flex-row"
-        onPress={() => {
-          navigator.goBack();
-        }}
-      >
-        <Text className="bg-red-400 text-3xl">Back</Text>
-      </TouchableOpacity>
-      <Text>Directory</Text>
+    <View className="flex flex-col items-center justify-center">
+      <BackButton navigator={navigator} text="back Directory" />
+      <ScrollView className="w-11/12">
+        {DirectoryData.map((directory, index) => (
+          <DirectoryCard
+            key={index}
+            name={directory.name}
+            phone={directory.phone}
+          ></DirectoryCard>
+        ))}
+      </ScrollView>
     </View>
   );
 };
