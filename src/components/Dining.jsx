@@ -1,20 +1,27 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
+import FoodCard from "./FoodCard";
+import DiningData from "./data/DiningData";
+import BackButton from "./BackButton";
+import { ScrollView } from "react-native";
 const Dining = () => {
   const navigator = useNavigation();
   return (
-    <View className="flex flex-col">
-      <TouchableOpacity
-        className="flex flex-row"
-        onPress={() => {
-          navigator.goBack();
-        }}
-      >
-        <Text className="bg-red-400 text-3xl">Back</Text>
-      </TouchableOpacity>
-      <Text>Dining</Text>
+    <View className="flex flex-col justify-center items-center">
+      <BackButton navigator={navigator} text="back Dining" />
+      <ScrollView className="w-11/12">
+        {DiningData.map((Dining, index) => {
+          return (
+            <FoodCard
+              key={index}
+              place={Dining}
+              navigator={navigator}
+              foodType="Dining"
+            />
+          );
+        })}
+      </ScrollView>
     </View>
   );
 };
