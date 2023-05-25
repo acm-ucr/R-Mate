@@ -14,6 +14,7 @@ import SRCSchedule from "../components/SRCSchedule";
 import SRCPrograms from "../components/SRCPrograms";
 import SRCFacilityCounts from "../components/SRCFacilityCounts";
 import SRCReservation from "../components/SRCReservation";
+import MarketDetailPage from "../components/MarketDetailPage";
 
 const screenOptions = {
   headerShown: false,
@@ -78,6 +79,11 @@ const HomeScreen = () => {
       <HomeStack.Screen
         name="srcReservation"
         component={SRCReservation}
+        options={screenOptions}
+      />
+      <HomeStack.Screen
+        name="marketDetailPage"
+        component={MarketDetailPage}
         options={screenOptions}
       />
     </HomeStack.Navigator>
