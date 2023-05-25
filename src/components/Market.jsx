@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
-import MarketCard from "./MarketCard";
+import FoodCard from "./FoodCard";
 import marketsData from "./data/MarketsData";
 import BackButton from "./BackButton";
 import { ScrollView } from "react-native";
@@ -13,7 +13,12 @@ const Market = () => {
       <ScrollView className="w-11/12">
         {marketsData.map((market, index) => {
           return (
-            <MarketCard key={index} market={market} navigator={navigator} />
+            <FoodCard
+              key={index}
+              place={market}
+              navigator={navigator}
+              foodType="Markets"
+            />
           );
         })}
       </ScrollView>
