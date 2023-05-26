@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "rmate",
     "name": "rmate",
     "slug": "rmate",
     "version": "1.0.0",
