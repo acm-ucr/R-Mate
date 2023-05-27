@@ -1,6 +1,6 @@
-import { View } from 'react-native';
-import React from 'react';
-import UCRLogo from '../../assets/UCRLogo.svg';
+import { View } from "react-native";
+import React from "react";
+import UCRLogo from "../../assets/UCRLogo.svg";
 
 const LoadingScreen = () => {
   return (

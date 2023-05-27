@@ -1,8 +1,8 @@
 /* eslint-disable camelcase */
-import { NavigationContainer } from '@react-navigation/native';
-import RootNavigator from './src/navigators/RootNavigator';
-import React, { useState, useEffect } from 'react';
-import RMateContext from './src/components/RMateContext';
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigator from "./src/navigators/RootNavigator";
+import React, { useState, useEffect } from "react";
+import RMateContext from "./src/components/RMateContext";
 // import './src/styles.css';
 
 import {
@@ -25,15 +25,15 @@ import {
   Poppins_800ExtraBold_Italic,
   Poppins_900Black,
   Poppins_900Black_Italic,
-} from '@expo-google-fonts/poppins';
+} from "@expo-google-fonts/poppins";
 
 export default function app() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     setUser({
-      name: 'AAAAAAA',
-      email: 'EAWTJGIEWA@ucr.edu',
+      name: "User Name",
+      email: "EAWTJGIEWA@ucr.edu",
     });
   }, []);
 

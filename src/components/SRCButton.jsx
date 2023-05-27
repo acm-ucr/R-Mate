@@ -1,18 +1,25 @@
-import { View, Text } from 'react-native';
-import React from 'react';
-import { AntDesign } from '@expo/vector-icons';
-import { TouchableOpacity } from 'react-native';
+import React from "react";
+import { AntDesign } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native";
 
-const SRCButton = () => {
+const SRCButton = ({ text, navigator, directTo }) => {
   return (
-    <View className="w-full flex flex-row">
-      <TouchableOpacity className="rounded-xl">
-        <Text className="bg-rmate-midblue text-rmate-white font-poppins-400 text-xl pt-2 pl-2 pb-2 pr-2">
-          <Text>Today&apos;s Schedule </Text>
-          <AntDesign name="right" size={24} color="white" />
-        </Text>
-      </TouchableOpacity>
-    </View>
+    <TouchableOpacity
+      className="mt-3 bg-rmate-midblue rounded-lg w-full flex flex-row items-center justify-between px-3"
+      onPress={() => {
+        navigator.navigate(directTo);
+      }}
+    >
+      <Text className="text-rmate-white font-poppins-600 text-lg p-2 ">
+        {text}
+      </Text>
+      <AntDesign
+        className="text-rmate-white font-poppins-600 text-lg p-2"
+        name="right"
+        size={24}
+        color="white"
+      />
+    </TouchableOpacity>
   );
 };
 export default SRCButton;
