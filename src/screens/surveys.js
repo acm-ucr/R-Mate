@@ -1,11 +1,25 @@
-import { View, Text } from "react-native";
 import React from "react";
-
+import SurveyForm from "../components/SurveyForm";
+import SurveyPage from "../components/SurveyPage";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+const screenOptions = {
+  headerShown: false,
+};
+const SurveyStack = createNativeStackNavigator();
 const SurveysScreen = () => {
   return (
-    <View>
-      <Text>surveys</Text>
-    </View>
+    <SurveyStack.Navigator>
+      <SurveyStack.Screen
+        name="surveyPage"
+        component={SurveyPage}
+        options={screenOptions}
+      />
+      <SurveyStack.Screen
+        name="surveyForm"
+        component={SurveyForm}
+        options={screenOptions}
+      />
+    </SurveyStack.Navigator>
   );
 };
 
