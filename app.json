@@ -15,14 +15,14 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.wumengxuan0728.rmate"
+      "bundleIdentifier": "com.acm-ucr.rmate"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.wumengxuan0728.rmate"
+      "package": "com.acm-ucr.rmate"
     },
     "web": {
       "favicon": "./assets/favicon.png"
