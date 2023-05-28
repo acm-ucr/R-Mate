@@ -1,15 +1,19 @@
 import { Text, TouchableOpacity } from "react-native";
 import React from "react";
+import BackArrow from "../../assets/arrow.svg";
 
 const BackButton = ({ text, navigator }) => {
   return (
     <TouchableOpacity
-      className="flex flex-row"
+      className="flex flex-row items-center"
       onPress={() => {
         navigator.goBack();
       }}
     >
-      <Text className="bg-red-400 text-3xl">{text}</Text>
+      <BackArrow />
+      <Text className="text-xl font-poppins-600 ml-3 content-center">
+        {text}
+      </Text>
     </TouchableOpacity>
   );
 };
