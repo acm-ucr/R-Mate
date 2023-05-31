@@ -3,6 +3,13 @@ import React, { useState } from "react";
 
 const FoodHours = ({ hours }) => {
   const [activeTab, setActiveTab] = useState("1");
+  // const splitHours = hours.slice(0, 7);
+
+  if (hours.title === "none") {
+    setActiveTab("0");
+  } else {
+    setActiveTab("1");
+  }
 
   const renderHours = () => {
     if (activeTab === "1") {
@@ -10,9 +17,20 @@ const FoodHours = ({ hours }) => {
         <View className="w-full bg-rmate-blue">
           {hours.map((hour, index) => (
             <View key={index}>
-              <Text>{hour.title}</Text>
               {hour.hours.map((operationalHours, index) => (
-                <Text key={index}>{operationalHours}</Text>
+                // const hourParts = operationalHours.split("/")
+                // <View className="flex flex-row justify-between py-1">
+                //   <Text
+                //     className="text-rmate-white font-poppins-600"
+                //     key={index}
+                //   >
+                //     {operationalHours}
+                //   </Text>
+                //   <Text className="text-rmate-white font-poppins-600">
+                //     6:30am - 11pm
+                //   </Text>
+                // </View>
+                <Text key={index}>oops</Text>
               ))}
             </View>
           ))}
