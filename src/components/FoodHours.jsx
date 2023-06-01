@@ -7,7 +7,8 @@ const FoodHours = ({ hours }) => {
       {hours.map((hour, index) => (
         <View key={index}>
           <Text>{hour.title}</Text>
-          {hour.hours.map((operationalHours, index) => (
+
+          {hour.hours?.map((operationalHours, index) => (
             <Text key={index}>{operationalHours}</Text>
           ))}
         </View>
