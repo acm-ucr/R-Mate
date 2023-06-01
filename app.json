@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.acm-ucr.rmate"
+      "package": "com.acm_ucr.rmate"
     },
     "web": {
       "favicon": "./assets/favicon.png"
