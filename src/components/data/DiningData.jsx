@@ -102,8 +102,8 @@ const DiningData = [
           "Saturday",
           "Sunday",
         ],
-        hours: [
-          "Closed",
+        time: [
+          "idk but it do be",
           "Closed",
           "Closed",
           "Closed",
@@ -123,7 +123,7 @@ const DiningData = [
           "Saturday",
           "Sunday",
         ],
-        hours: [
+        time: [
           "7:30am - 10:30am",
           "7:30am - 10:30am",
           "7:30am - 10:30am",
@@ -144,7 +144,7 @@ const DiningData = [
           "Saturday",
           "Sunday",
         ],
-        hours: [
+        time: [
           "7:30am - 10:30am",
           "7:30am - 10:30am",
           "7:30am - 10:30am",
