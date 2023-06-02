@@ -4,13 +4,13 @@ import React from "react";
 const RadioButton = ({ value, status, onPress }) => {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
-      <View className="flex flex-row items-center">
+      <View className="flex flex-row gap-x-3 items-center">
         <View
-          className={`w-[15px] h-[15px] border-2 rounded-full ${
-            status ? "bg-rmate-blue" : "bg-white"
+          className={`w-[15px] h-[15px] rounded-full ${
+            status ? "bg-rmate-blue" : "bg-rmate-lightblue"
           }`}
         />
-        <Text>{value}</Text>
+        <Text className="text-black text-xs font-poppins-500">{value}</Text>
       </View>
     </TouchableWithoutFeedback>
   );
