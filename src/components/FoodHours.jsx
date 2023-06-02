@@ -26,13 +26,15 @@ const FoodHours = ({ hours }) => {
 
   const renderTime = (activeTab) => {
     return (
-      <View className={`w-full rounded-xl p-3 ${bgColor}`}>
+      <View
+        className={`w-fit rounded-xl px-3 py-2 justify-center bottom-3 ${bgColor}`}
+      >
         {hours.map((timeSlot) =>
           timeSlot.title === activeTab ? (
             <View key={timeSlot}>
               {timeSlot.days.map((day, index) => (
                 <View
-                  className="flex flex-row justify-between py-1"
+                  className="flex flex-row justify-between py-[0.85]"
                   key={index}
                 >
                   <Text className={`${textColor} font-poppins-600`}>{day}</Text>
@@ -49,9 +51,9 @@ const FoodHours = ({ hours }) => {
   };
 
   return (
-    <View>
+    <View className="w-fit mx-2 justify-center">
       {hours[0].title === "none" && (
-        <View className="w-full bg-rmate-lightblue">
+        <View className="w-fit bg-rmate-lightblue">
           {hours.map((hour, index) => (
             <View key={index}>
               {hour.hours.map((operationalHours, index) => (
@@ -65,24 +67,24 @@ const FoodHours = ({ hours }) => {
         <View>
           <View className="flex flex-row">
             <TouchableOpacity onPress={() => setActiveTab("Breakfast/Brunch")}>
-              <View className="bg-rmate-lightblue border-t-2 border-x-2 rounded-md px-2 py-0">
-                <Text className="font-poppins-500 text-md mx-2">
+              <View className="bg-rmate-lightblue border-rmate-lightblue h-10 rounded-md px-2 pt-1">
+                <Text className="font-poppins-600 text-md mx-2">
                   Breakfast/Brunch
                 </Text>
                 {colorStyle()}
               </View>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => setActiveTab("Lunch")}>
-              <View className="bg-rmate-blue border-t-2 border-x-2 rounded-md px-2 py-0">
-                <Text className="text-rmate-white font-poppins-500 text-md mx-2">
+              <View className="bg-rmate-blue border-rmate-blue h-10 rounded-md px-6 pt-1">
+                <Text className="text-rmate-white font-poppins-600 text-md mx-2">
                   Lunch
                 </Text>
                 {colorStyle()}
               </View>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => setActiveTab("Dinner")}>
-              <View className="bg-rmate-midblue border-t-2 border-x-2 rounded-md px-2 py-0">
-                <Text className="text-rmate-white font-poppins-500 text-md mx-2">
+              <View className="bg-rmate-midblue border-rmate-midblue h-10 px-6 rounded-md pt-1">
+                <Text className="text-rmate-white font-poppins-600 text-md mx-2">
                   Dinner
                 </Text>
                 {colorStyle()}
