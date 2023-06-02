@@ -197,7 +197,7 @@ const DiningData = [
           "Saturday",
           "Sunday",
         ],
-        hours: [
+        time: [
           "7:00 AM - 11:00 PM",
           "7:00 AM - 11:00 PM",
           "7:00 AM - 11:00 PM",

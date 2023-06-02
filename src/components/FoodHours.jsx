@@ -51,13 +51,21 @@ const FoodHours = ({ hours }) => {
   };
 
   return (
-    <View className="w-fit mx-2 justify-center">
+    <View className="w-fit">
       {hours[0].title === "none" && (
-        <View className="w-fit bg-rmate-lightblue">
-          {hours.map((hour, index) => (
-            <View key={index}>
-              {hour.hours.map((operationalHours, index) => (
-                <Text key={index}>{operationalHours}</Text>
+        <View className="bg-rmate-lightblue rounded-xl mx-2 px-3 py-2">
+          {hours.map((timeSlot) => (
+            <View key={timeSlot}>
+              {timeSlot.days.map((day, index) => (
+                <View
+                  className="flex flex-row justify-between py-[0.85]"
+                  key={index}
+                >
+                  <Text className={`${textColor} font-poppins-600`}>{day}</Text>
+                  <Text className={`${textColor} font-poppins-600`}>
+                    {timeSlot.time[index]}
+                  </Text>
+                </View>
               ))}
             </View>
           ))}
