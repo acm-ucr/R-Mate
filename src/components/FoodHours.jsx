@@ -27,7 +27,7 @@ const FoodHours = ({ hours }) => {
   const renderTime = (activeTab) => {
     return (
       <View
-        className={`w-fit rounded-xl px-3 py-2 justify-center bottom-3 ${bgColor}`}
+        className={`w-fit rounded-xl mx-2 px-3 py-2 justify-center bottom-3 ${bgColor}`}
       >
         {hours.map((timeSlot) =>
           timeSlot.title === activeTab ? (
@@ -73,7 +73,7 @@ const FoodHours = ({ hours }) => {
       )}
       {hours[0].title === "Breakfast/Brunch" && (
         <View>
-          <View className="flex flex-row">
+          <View className="flex flex-row ml-2">
             <TouchableOpacity onPress={() => setActiveTab("Breakfast/Brunch")}>
               <View className="bg-rmate-lightblue border-rmate-lightblue h-10 rounded-md px-2 pt-1">
                 <Text className="font-poppins-600 text-md mx-2">
