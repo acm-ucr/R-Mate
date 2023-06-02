@@ -102,6 +102,25 @@ const FoodHours = ({ hours }) => {
           {renderTime(activeTab)}
         </View>
       )}
+      {hours[0].title === "Patio Bar" && (
+        <View>
+          <View className="flex flex-row">
+            <TouchableOpacity onPress={() => setActiveTab("Patio Bar")}>
+              <View className="bg-rmate-lightblue border-rmate-lightblue h-10 rounded-md px-2 pt-1">
+                <Text className="font-poppins-600 text-md mx-2">Patio Bar</Text>
+                {colorStyle()}
+              </View>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => setActiveTab("Patio Bar")}>
+              <View className="bg-rmate-lightblue border-rmate-lightblue h-10 rounded-md px-2 pt-1">
+                <Text className="font-poppins-600 text-md mx-2">Patio Bar</Text>
+                {colorStyle()}
+              </View>
+            </TouchableOpacity>
+          </View>
+          {renderTime(activeTab)}
+        </View>
+      )}
     </View>
   );
 };
