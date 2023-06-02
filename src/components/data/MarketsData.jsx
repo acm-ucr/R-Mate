@@ -27,7 +27,7 @@ const marketsData = [
       },
     ],
     website: "http://dining.ucr.edu/marketatglenmor/",
-    address: "400 W Big Springs Rd, Riverside, CA 92507, USA",
+    address: "400 W Big Springs Rd, Riverside, CA 92507",
     phoneNumber: "(951) 827-6350",
   },
   {
@@ -115,7 +115,7 @@ const marketsData = [
         ],
       },
     ],
-    address: "900 University Ave, Riverside, CA 92507",
+    address: "733 W Linden St, Riverside, CA 92521",
   },
 ];
 
