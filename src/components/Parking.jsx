@@ -24,7 +24,11 @@ const Parking = () => {
     <View className="flex flex-col justify-center items-center">
       <BackButton navigator={navigator} text="Back Parking" />
       <ParkingLotFilter />
-      <ScrollView className="w-11/12">
+      <ScrollView
+        vertical
+        showsVerticalScrollIndicator={false}
+        className="w-11/12"
+      >
         {lotAvailability &&
           lotAvailability.map((lot, index) => {
             return (
