@@ -1,7 +1,7 @@
 const SurveyData = [
   {
     title: "Form/Survey 1",
-    due: new Date(6, 2, 2023),
+    due: "June 2, 2023",
     questions: [
       {
         type: "radio",
@@ -27,7 +27,7 @@ const SurveyData = [
   },
   {
     title: "Form/Survey 1",
-    due: new Date(5, 2, 2023),
+    due: "May 2, 2023",
     questions: [
       {
         type: "checkbox",
