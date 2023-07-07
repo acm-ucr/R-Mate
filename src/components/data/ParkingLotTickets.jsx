@@ -1,13 +1,13 @@
 const ParkingLotTickets = {
-  "Lot 30": "Gold",
-  "Lot 50": "Gold",
-  "Lot 32": "Gold",
-  "Lot 23": "blue",
-  "Lot 26": "Gold",
-  "Lot 1": "Gold",
-  "Lot 19": "Red",
-  "Lot 15": "Red",
-  "Lot 13": "Red",
+  "Lot 30": "GOLD",
+  "Lot 50": "GOLD",
+  "Lot 32": "GOLD",
+  "Lot 23": "BLUE",
+  "Lot 26": "GOLD",
+  "Lot 1": "GOLD",
+  "Lot 19": "RED",
+  "Lot 15": "RED",
+  "Lot 13": "RED",
 };
 
 export default ParkingLotTickets;
