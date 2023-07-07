@@ -5,24 +5,27 @@ import FoodCard from "./FoodCard";
 import DiningData from "./data/DiningData";
 import BackButton from "./BackButton";
 import { ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 const Dining = () => {
   const navigator = useNavigation();
   return (
-    <View className="flex flex-col justify-center items-center">
-      <BackButton navigator={navigator} text="back Dining" />
-      <ScrollView className="w-11/12">
-        {DiningData.map((Dining, index) => {
-          return (
-            <FoodCard
-              key={index}
-              place={Dining}
-              navigator={navigator}
-              foodType="Dining"
-            />
-          );
-        })}
-      </ScrollView>
-    </View>
+    <SafeAreaView className="flex flex-col justify-center items-center">
+      <View className="flex flex-col w-10/12">
+        <BackButton navigator={navigator} text="Dining" />
+        <ScrollView className="w-12/12">
+          {DiningData.map((Dining, index) => {
+            return (
+              <FoodCard
+                key={index}
+                place={Dining}
+                navigator={navigator}
+                foodType="Dining"
+              />
+            );
+          })}
+        </ScrollView>
+      </View>
+    </SafeAreaView>
   );
 };
 
