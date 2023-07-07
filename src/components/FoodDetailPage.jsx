@@ -27,27 +27,25 @@ const FoodDetailPage = ({ route }) => {
       <Image source={route.params.place.picture} className="w-screen h-fit" />
 
       <View className="p-4">
-        <ScrollView style={{ flex: 1 }} horizontal>
-          <View className="flex flex-row pb-2 overflow-scroll">
-            {route.params.place.paying.map((pay, index) => {
-              return (
-                <View
-                  className="bg-rmate-blue rounded-full py-1 px-2.5 mr-1"
-                  key={index}
-                >
-                  <Text className="text-xs font-poppins-300 text-white">
-                    {pay}
-                  </Text>
-                </View>
-              );
-            })}
-            <TouchableOpacity className="border border-[#44B300] rounded-full px-2.5">
-              <Text className="text-xs font-poppins-300 text-[#44B300] mt-1">
-                Open
-              </Text>
-            </TouchableOpacity>
-          </View>
-        </ScrollView>
+        <View className="flex flex-row flex-wrap pb-2 gap-y-2">
+          {route.params.place.paying.map((pay, index) => {
+            return (
+              <View
+                className="bg-rmate-blue rounded-full py-1 px-2.5 mr-1"
+                key={index}
+              >
+                <Text className="text-xs font-poppins-300 text-white">
+                  {pay}
+                </Text>
+              </View>
+            );
+          })}
+          <TouchableOpacity className="border border - [#44B300] rounded-full px-2.5">
+            <Text className="text-xs font-poppins-300 text-[#44B300] mt-1">
+              Open
+            </Text>
+          </TouchableOpacity>
+        </View>
 
         <Text className="text-xl text-rmate-blue font-bold mt-2 pb-1">
           Address
