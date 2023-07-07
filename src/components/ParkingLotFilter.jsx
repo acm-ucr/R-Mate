@@ -8,6 +8,7 @@ export default function ParkingLotFilter() {
   const [expand, setExpand] = useState(false);
   const [selected, setSelected] = useState("All");
   const data = [
+    "All Parking Zones",
     "RED Parking",
     "BLUE Parking",
     "GOLD Parking",
