@@ -3,7 +3,6 @@ import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native";
 import BellTower from "../../assets/bellTower.svg";
-import UCLogo from "../../assets/UCLogo.svg";
 
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -11,7 +10,7 @@ const LoginScreen = () => {
     <View className="w-full h-full">
       <SafeAreaView className="h-full w-full bg-rmate-blue flex flex-col justify-center items-center z-0">
         <View className="absolute top-[10%] left-5 flex flex-row items-center">
-          <UCLogo width={50} height={50} />
+          <Text>import and add UCLogo here</Text>
           <Text className="text-rmate-offwhite text-2xl font-poppins-600 ml-2">
             RIVERSIDE
           </Text>
