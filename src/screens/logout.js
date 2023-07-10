@@ -2,7 +2,6 @@ import React from "react";
 import { Text, View, SafeAreaView } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Feather } from "@expo/vector-icons";
-import UCRSVG from "../../assets/UCR.svg";
 import BellSVG from "../../assets/bell.svg";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
@@ -27,7 +26,7 @@ const LogoutScreen = () => {
         </Text>
       </View>
       <View className="w-full h-1/2 pt-3 justify-center items-center">
-        <UCRSVG />
+        <Text>import and add UCRSVG here</Text>
       </View>
       <View className="w-full h-1/2 justify-center">
         <TouchableOpacity

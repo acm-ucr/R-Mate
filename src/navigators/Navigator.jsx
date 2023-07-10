@@ -6,8 +6,8 @@ import map from "../screens/map";
 import surveys from "../screens/surveys";
 import BottomBar from "../components/BottomBar";
 import { useNavigation } from "@react-navigation/native";
-import { View, TouchableOpacity } from "react-native";
-import UCRNavbarLogo from "../../assets/UCRNavbarLogo.svg";
+import { View, Text, TouchableOpacity } from "react-native";
+
 import ProfileSVG from "../../assets/profilePIC.svg";
 
 const Navigator = () => {
@@ -17,7 +17,7 @@ const Navigator = () => {
     headerTitle: () => (
       <View className="w-full h-full">
         <View className="absolute right-10 flex flex-row items-center">
-          <UCRNavbarLogo width={124} height={37} />
+          <Text>import and add UCRNavbarLogo here</Text>
         </View>
       </View>
     ),

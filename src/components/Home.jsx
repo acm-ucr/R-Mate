@@ -2,7 +2,7 @@ import { View, FlatList, SafeAreaView } from "react-native";
 import React from "react";
 import Welcome from "../components/Welcome";
 import ResourcesCard from "../components/ResourcesCard";
-import srcSVG from "../../assets/SRC.svg";
+// import srcSVG from "../../assets/SRC.svg";
 import careerSVG from "../../assets/career.svg";
 import librarySVG from "../../assets/library.svg";
 import diningSVG from "../../assets/dining.svg";
@@ -13,11 +13,11 @@ import arcSVG from "../../assets/ARC.svg";
 import Title from "./Title";
 
 const resources = [
-  {
-    text: "SRC",
-    icon: srcSVG,
-    navigate: "src",
-  },
+  // {
+  //   text: "SRC",
+  //   icon: srcSVG,
+  //   navigate: "src",
+  // },
   {
     text: "ARC",
     icon: arcSVG,
