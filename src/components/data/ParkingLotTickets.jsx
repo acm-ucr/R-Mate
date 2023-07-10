@@ -1,13 +1,36 @@
 const ParkingLotTickets = {
-  "Lot 30": "Gold",
-  "Lot 50": "Gold",
-  "Lot 32": "Gold",
-  "Lot 23": "blue",
-  "Lot 26": "Gold",
-  "Lot 1": "Gold",
-  "Lot 19": "Red",
-  "Lot 15": "Red",
-  "Lot 13": "Red",
+  "Big Springs 1": {
+    address: "400 Big Springs Road",
+    zones: ["Gold"],
+  },
+  "Big Springs 2": {
+    address: "405 Big Springs Road",
+    zones: ["Gold"],
+  },
+  "Lot 6": {
+    address: "Lot 6",
+    zones: ["Gold"],
+  },
+  "Lot 24": {
+    address: "Canyon Crest Drive",
+    zones: ["Gold"],
+  },
+  "Lot 26": {
+    address: "Rustin Avenue",
+    zones: ["Gold"],
+  },
+  "Lot 30": {
+    address: "Lot 30",
+    zones: ["Gold"],
+  },
+  "Lot 32": {
+    address: "Lot 32",
+    zones: ["Gold"],
+  },
+  "Lot 50": {
+    address: "Everton Place",
+    zones: ["Gold"],
+  },
 };
 
 export default ParkingLotTickets;
