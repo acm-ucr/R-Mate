@@ -10,7 +10,9 @@ const Parking = () => {
 
   return (
     <View className="flex flex-col justify-center items-center">
-      <BackButton navigator={navigator} text="Back Parking" />
+      <View className="w-11/12 mt-2 mb-2 flex-row">
+        <BackButton navigator={navigator} text="Parking" />
+      </View>
       <ParkingLotFilter />
       <ScrollView
         vertical

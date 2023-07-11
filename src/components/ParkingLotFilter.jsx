@@ -26,7 +26,9 @@ export default function ParkingLotFilter() {
           setExpand(!expand);
         }}
       >
-        <Text className=" text-white text-xl font-poppins-400">{selected}</Text>
+        <Text className="flex-1 text-white text-xl font-poppins-400">
+          {selected}
+        </Text>
         {expand ? (
           <Icon name="md-caret-down" size={25} color={"white"} />
         ) : (
