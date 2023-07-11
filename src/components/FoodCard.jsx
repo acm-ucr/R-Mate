@@ -24,7 +24,7 @@ const FoodCard = ({ place, navigator, foodType }) => {
           {place.address}
         </Text>
 
-        <View className="flex flex-row justify-start">
+        <View className="flex flex-row justify-start flex-wrap">
           {place.paying.map((pay, index) => (
             <View key={index} className="rounded-full bg-rmate-blue p-2 m-1">
               <Text className="text-center text-rmate-white">{pay}</Text>
