@@ -2,6 +2,7 @@ import { View, Text, ScrollView } from "react-native";
 import React from "react";
 import BackButton from "./BackButton";
 import RadioQuestion from "./RadioQuestion";
+import ScaleQuestion from "./ScaleQuestion";
 
 const SurveyForm = ({ route }) => {
   return (
@@ -14,6 +15,13 @@ const SurveyForm = ({ route }) => {
         {route.params.survey.questions.map((question, index) =>
           question.type == "radio" ? (
             <RadioQuestion
+              key={index}
+              index={index + 1}
+              question={question.question}
+              options={question.options}
+            />
+          ) : question.type == "scale" ? (
+            <ScaleQuestion
               key={index}
               index={index + 1}
               question={question.question}
