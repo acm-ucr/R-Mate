@@ -9,7 +9,9 @@ const Market = () => {
   const navigator = useNavigation();
   return (
     <View className="flex flex-col justify-center items-center">
-      <BackButton navigator={navigator} text="back Market" />
+      <View className="w-11/12 mt-2 mb-1.5 flex-row">
+        <BackButton navigator={navigator} text="Market" />
+      </View>
       <ScrollView className="w-11/12">
         {marketsData.map((market, index) => {
           return (
