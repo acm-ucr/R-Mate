@@ -15,11 +15,18 @@ const FoodCard = ({ place, navigator, foodType }) => {
       }}
     >
       <View className="rounded-[11px] bg-rmate-white p-4">
-        <Text className="text-rmate-blue text-[19px] font-poppins-600 font-bold">
-          {place.location_name}
-        </Text>
-        {place.category && <Text>{place.category}</Text>}
+        <View className="flex flex-row">
+          <Text className="text-rmate-blue text-[19px] font-poppins-600 font-bold flex-1">
+            {place.location_name}
+          </Text>
+          {place.category && <Text>{place.category}</Text>}
 
+          <TouchableOpacity className="border border-[#44B300] rounded-full px-2.5">
+            <Text className="text-xs font-poppins-300 text-[#44B300] mt-1">
+              Open
+            </Text>
+          </TouchableOpacity>
+        </View>
         <Text className="py-[8px] text-rmate-blue text-[12px] font-poppins-400 w-[138px]">
           {place.address}
         </Text>
