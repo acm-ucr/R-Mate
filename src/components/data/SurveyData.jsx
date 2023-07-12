@@ -23,6 +23,11 @@ const SurveyData = [
         question: "Question questions question question question (Select one)",
         options: ["Option a", "Option b", "Option c", "Option d"],
       },
+      {
+        type: "short response",
+        question:
+          "Question questions question question question (Short response)",
+      },
     ],
   },
   {
