@@ -24,6 +24,11 @@ const SurveyData = [
           "Question questions question question question (Rate from 1 to 5)",
         options: ["1", "2", "3", "4", "5"],
       },
+      {
+        type: "short response",
+        question:
+          "Question questions question question question (Short response)",
+      },
     ],
   },
   {
