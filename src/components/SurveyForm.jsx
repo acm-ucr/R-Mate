@@ -27,6 +27,7 @@ const SurveyForm = ({ route }) => {
               index={index + 1}
               question={question.question}
               options={question.options}
+            />
           ) : question.type == "short response" ? (
             <ShortResponseQuestion
               key={index}
@@ -34,7 +35,7 @@ const SurveyForm = ({ route }) => {
               question={question.question}
             />
           ) : (
-            <Text key={index}> question.type</Text>
+            <Text key={index}>question.type</Text>
           )
         )}
         <View className="flex items-end">
