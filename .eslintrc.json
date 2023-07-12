@@ -10,5 +10,10 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
-  "rules": { "require-jsdoc": "off", "react/prop-types": "off" }
+  "rules": { "require-jsdoc": "off", "react/prop-types": "off" },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
