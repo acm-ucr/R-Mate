@@ -2,6 +2,7 @@ import { View, Text, ScrollView, Alert, TouchableOpacity } from "react-native";
 import React from "react";
 import BackButton from "./BackButton";
 import RadioQuestion from "./RadioQuestion";
+import ScaleQuestion from "./ScaleQuestion";
 import ShortResponseQuestion from "./ShortResponseQuestion";
 
 const SurveyForm = ({ route }) => {
@@ -20,6 +21,12 @@ const SurveyForm = ({ route }) => {
               question={question.question}
               options={question.options}
             />
+          ) : question.type == "scale" ? (
+            <ScaleQuestion
+              key={index}
+              index={index + 1}
+              question={question.question}
+              options={question.options}
           ) : question.type == "short response" ? (
             <ShortResponseQuestion
               key={index}

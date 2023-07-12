@@ -19,9 +19,10 @@ const SurveyData = [
         options: ["Option a", "Option b", "Option c", "Option d"],
       },
       {
-        type: "checkbox",
-        question: "Question questions question question question (Select one)",
-        options: ["Option a", "Option b", "Option c", "Option d"],
+        type: "scale",
+        question:
+          "Question questions question question question (Rate from 1 to 5)",
+        options: ["1", "2", "3", "4", "5"],
       },
       {
         type: "short response",
